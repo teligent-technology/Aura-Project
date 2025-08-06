@@ -287,3 +287,30 @@
   color: white;
 }
 
+.aura-auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.aura-sign-in {
+  font-weight: 500;
+  color: #00c3ff;
+  text-decoration: none;
+}
+
+.aura-start-trial-btn {
+  background: linear-gradient(90deg, #00c3ff, #0077ff);
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.aura-start-trial-btn:hover {
+  transform: scale(1.05);
+}
+
+
