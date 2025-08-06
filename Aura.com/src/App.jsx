@@ -28,6 +28,8 @@ import ABC11 from './Pages/ABC11';
 import NewYorkPolice from './Pages/NewYorkPolice';
 import ABCNational from './Pages/ABCNational';
 import AccountIn from './Pages/AccountIn';
+import MicrosoftStore from './Pages/MicrosoftStore';
+import InternetSecurity from './Pages/InternetSecurity';
 import LearnMore from './Pages/LearnMore';
 const App = () => {
   useEffect(() => {
@@ -67,6 +69,9 @@ const App = () => {
         <Route path="/ABCNational" element={<ProtectedRoute><ABCNational /></ProtectedRoute>} />
         <Route path="/AccountIn" element={<ProtectedRoute><AccountIn /></ProtectedRoute>} />
         <Route path="/LearnMore" element={<ProtectedRoute><LearnMore /></ProtectedRoute>} />
+        <Route path="/microsoft-store" element={<ProtectedRoute><MicrosoftStore /></ProtectedRoute>} />
+        <Route path="/internet-security" element={<ProtectedRoute><InternetSecurity /></ProtectedRoute>} />
+
 
 
 
