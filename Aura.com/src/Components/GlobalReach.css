@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.global-reach-section {
+  background: radial-gradient(circle at center, #eaf4ff, #f5faff);
+  padding: 5rem 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.global-heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #0b1a33;
+  margin-bottom: 0.5rem;
+  animation: titlePulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes titlePulse {
+  0% { text-shadow: 0 0 0 transparent; }
+  50% { text-shadow: 0 0 8px #4fd2ff, 0 0 14px #85f0ff; }
+  100% { text-shadow: 0 0 0 transparent; }
+}
+
+.global-subtext {
+  font-size: 1.15rem;
+  color: #333;
+  margin-bottom: 2rem;
+  animation: fadeInUp 2s ease forwards;
+}
+
+.highlight {
+  font-weight: 600;
+  background: linear-gradient(90deg, #1f5eff, #00e0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorShift 5s infinite linear;
+}
+
+@keyframes colorShift {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.world-map-container {
+  position: relative;
+  display: inline-block;
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.world-map-container:hover {
+  transform: scale(1.02) rotateX(4deg) rotateY(-4deg);
+}
+
+.world-map {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 16px;
+  /* box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1); */
+  transition: transform 1s ease;
+}
+
+/* Dot style */
+.dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #00f2ff;
+  box-shadow:
+    0 0 12px #00f2ff,
+    0 0 20px rgba(0, 255, 255, 0.3),
+    inset 0 0 4px #fff;
+  animation: dotPulse 3s ease-in-out infinite, hueShift 8s linear infinite;
+  z-index: 2;
+}
+
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.6); opacity: 1; }
+}
+
+@keyframes hueShift {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* Optional ring effect */
+.dot::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,255,255,0.3) 20%, transparent 70%);
+  animation: ringPulse 3.5s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes ringPulse {
+  0% { transform: scale(0.8); opacity: 0.4; }
+  50% { transform: scale(1.5); opacity: 0.9; }
+  100% { transform: scale(0.8); opacity: 0.4; }
+}
+
+/* Coordinates for dots (same as before) */
+.india {
+  top: 58%;
+  left: 65%;
+}
+.us {
+  top: 42%;
+  left: 23%;
+}
+.europe {
+  top: 38%;
+  left: 52%;
+}
+.australia {
+  top: 72%;
+  left: 80%;
+}
+.south-america {
+  top: 65%;
+  left: 32%;
+}
+
+/* Text fade-in */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
