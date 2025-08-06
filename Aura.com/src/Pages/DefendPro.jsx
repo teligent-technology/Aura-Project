@@ -1,8 +1,12 @@
 import React from 'react';
+import AppNavbar from '../Components/AppNavbar';
+import AllSection from '../Components/AllSection';
 import './HeroBanner.css';
 
 const HeroBanner = () => {
   return (
+    <>    
+    <AppNavbar/>
     <section className="hero-banner">
       <div className="hero-content">
         <h1 className="hero-title">Protection Built for the Real World — Not Just Viruses.</h1>
@@ -11,6 +15,9 @@ const HeroBanner = () => {
         </p>
       </div>
     </section>
+    <AllSection/>
+    </>
+
   );
 };
 
