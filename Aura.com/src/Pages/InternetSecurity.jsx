@@ -75,8 +75,8 @@ const InternetSecurity = () => {
               <h2 className="section-heading">🌐 Resources for Internet Safety</h2>
               <ul className="resource-links">
                 <li><a href="/resources">📚 Scam & Fraud Prevention Guides</a></li>
-                <li><a href="/HowSaffronWorks">🛠️ How DefendMePro Works</a></li>
-                <li><a href="/Talk-To-Expert">💬 Talk to an Expert</a></li>
+                <li><a href="/DefendPro">🛠️ How DefendMePro Works</a></li>
+                <li><a href="/contact">💬 Talk to an Expert</a></li>
               </ul>
             </Col>
           </Row>

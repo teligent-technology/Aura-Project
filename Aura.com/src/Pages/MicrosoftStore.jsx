@@ -1,6 +1,7 @@
 import React from 'react';
 import './MicrosoftStore.css';
 import AppNavbar from '../Components/AppNavbar';
+import { Link } from 'react-router-dom'; // Make sure this is imported
 import AllSection from '../Components/AllSection';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -66,9 +67,9 @@ const MicrosoftStore = () => {
                 No real Microsoft agent will ever ask for your passwords, remote access, or payment on a call.<br />
                 If you’re ever unsure, speak to a real tech expert or use our <strong>DefendMePro™</strong> service to block scams instantly.
               </p>
-              <p className="cta-button">
-                💬 Talk to Our Scam Protection Experts Today
-              </p>
+             <Link to="/contact" className="cta-button">
+  💬 Talk to Our Scam Protection Experts Today
+</Link>
             </section>
           </Col>
         </Row>
