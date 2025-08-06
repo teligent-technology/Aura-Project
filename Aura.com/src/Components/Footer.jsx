@@ -180,8 +180,8 @@ const Footer = () => {
     </div>
     <div className="cta-buttons">
 <Link className="cta-btn" to="/contact">📞 Call Us</Link>
-<button className="cta-btn" onClick={() => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' })}>💬 Chat</button>
-<button className="cta-btn" onClick={() => document.getElementById('learn-more')?.scrollIntoView({ behavior: 'smooth' })}>📘 Learn More</button>
+{/* <button className="cta-btn" onClick={() => document.getElementById('chat')?.scrollIntoView({ behavior: 'smooth' })}>💬 Chat</button> */}
+{/* <button className="cta-btn" onClick={() => document.getElementById('learn-more')?.scrollIntoView({ behavior: 'smooth' })}>📘 Learn More</button> */}
     </div>
   </div>
     </section>
