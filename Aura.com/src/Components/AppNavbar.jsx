@@ -32,6 +32,8 @@ const AppNavbar = () => {
           <Nav className="mx-auto aura-nav-links">
             <Nav.Link as={Link} to="/home">Home</Nav.Link>
             <Nav.Link as={Link} to="/DefendPro">Defend Pro</Nav.Link>
+                        <Nav.Link as={Link} to="/Pricing">Pricing</Nav.Link>
+
 
             {/* Solutions Dropdown */}
             <NavDropdown title="Solutions" id="solutions-dropdown">
