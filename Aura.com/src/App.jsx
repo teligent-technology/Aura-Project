@@ -1,7 +1,8 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-
+import { useEffect } from 'react';
+import keepAlive from './utils/keepalive';
 import Layout from './Layout';
 import Home from './Pages/Home';
 import Feature from './Pages/Feature';
@@ -29,6 +30,9 @@ import ABCNational from './Pages/ABCNational';
 import AccountIn from './Pages/AccountIn';
 import LearnMore from './Pages/LearnMore';
 const App = () => {
+  useEffect(() => {
+    keepAlive(); // 👈 call it once when app loads
+  }, []);
   return (
 <div style={{ margin: 0, padding: 0, overflowX: 'hidden' }}>
 
