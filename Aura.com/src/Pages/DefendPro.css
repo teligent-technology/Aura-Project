@@ -56,3 +56,142 @@
   0% { transform: scale(0.9); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
+
+
+/* ========== Scam Awareness Banner ========== */
+.scam-banner {
+  background: linear-gradient(135deg, #f9fdff 0%, #d6edff 100%);
+  padding: 5rem 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.scam-banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.scam-banner-text {
+  flex: 1 1 600px;
+  animation: fadeSlideUp 1.2s ease forwards;
+}
+
+.scam-banner-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.05);
+}
+
+.scam-banner-para {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.scam-banner-para span {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.scam-banner-para em {
+  color: #e53935;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.scam-banner-warning {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #d32f2f;
+  background: #fff4f4;
+  padding: 1rem;
+  border-left: 6px solid #d32f2f;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.scam-banner-image {
+  flex: 1 1 400px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.scam-banner-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25), 0 0 20px rgba(0, 255, 255, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.scam-banner-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35), 0 0 25px rgba(0, 255, 255, 0.12);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* === Animations === */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scam-banner-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .scam-banner-text {
+    flex: 1 1 100%;
+  }
+
+  .scam-banner-image {
+    flex: 1 1 100%;
+  }
+}
+
+

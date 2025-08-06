@@ -1,0 +1,103 @@
+.reality-numbers-wrapper {
+  background: linear-gradient(135deg, #e8f4ff, #f0fbff);
+  border: 1px solid rgba(0, 123, 255, 0.25);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+  box-shadow: 0 15px 40px rgba(0, 123, 255, 0.08);
+  backdrop-filter: blur(6px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  animation: fadeInUp 1s ease;
+  display: block; /* Ensure block layout */
+  width: 100%;
+}
+
+.reality-numbers-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.06), transparent 70%);
+  animation: rotateLightBlue 22s linear infinite;
+  z-index: 0;
+}
+
+.reality-numbers-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #124a7c;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  animation: slideFadeDown 1s ease-in-out;
+}
+
+.reality-point {
+  background: rgba(255, 255, 255, 0.85);
+  border-left: 6px solid #007acc;
+  padding: 1.2rem 1.7rem;
+  margin: 1.2rem 0;
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeSlideRight 0.6s ease forwards;
+  opacity: 0;
+}
+
+.reality-point:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 123, 255, 0.2);
+}
+
+/* Animations */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotateLightBlue {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
