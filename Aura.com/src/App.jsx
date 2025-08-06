@@ -11,7 +11,7 @@ import Login from './Pages/Login';
 import Signup from './Pages/Signup';
 // import ExpertPanel from './Pages/ExpertPanel';
 import UserDashboard from './Pages/UserDashboard';
-import OtpVerify from './Pages/otp';
+import OtpVerify from './Pages/Otp';
 import About from './Components/About';
 import PrivacyPolicy from './Components/PrivacyPolicy';
 import Terms from './Components/Terms';
