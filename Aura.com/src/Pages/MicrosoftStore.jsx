@@ -1,9 +1,13 @@
 import React from 'react';
 import './MicrosoftStore.css';
+import AppNavbar from '../Components/AppNavbar';
+import AllSection from '../Components/AllSection';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const MicrosoftStore = () => {
   return (
+    <>
+    <AppNavbar/>
     <div className="microsoft-store-page">
       <header className="store-hero">
         <h1>🛡️ Microsoft Store: Your First Line of Digital Defense</h1>
@@ -70,6 +74,8 @@ const MicrosoftStore = () => {
         </Row>
       </Container>
     </div>
+    <AllSection/>
+    </>
   );
 };
 

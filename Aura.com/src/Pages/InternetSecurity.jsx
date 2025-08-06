@@ -1,9 +1,13 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import AppNavbar from '../Components/AppNavbar';
+import AllSection from '../Components/AllSection';
 import './InternetSecurity.css';
 
 const InternetSecurity = () => {
   return (
+    <>
+    <AppNavbar/>
     <div className="internet-security-page">
       <header className="security-hero">
         <h1 className="security-title">🛡️ Internet Security & Online Fraud Protection</h1>
@@ -79,6 +83,8 @@ const InternetSecurity = () => {
         </Container>
       </section>
     </div>
+    <AllSection/>
+    </>
   );
 };
 
