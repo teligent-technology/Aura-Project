@@ -43,7 +43,7 @@ const AccountIn = () => {
     try {
       const token = localStorage.getItem('authToken');
       const res = await axios.put(
-        'http://localhost:5000/api/auth/change-password',
+        'https://aura-project-back.onrender.com/api/auth/change-password',
         { oldPassword: oldPass, newPassword: newPass },
         { headers: { Authorization: token } }
       );
