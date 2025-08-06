@@ -4,7 +4,7 @@ import AppNavbar from '../Components/AppNavbar.jsx'
 import AllSection from '../Components/AllSection.jsx'
 import RealityNumber from '../Components/RealityNumber.jsx';
 import TraditionalSecurityFails from '../Components/TraditionalSecurityFails.jsx'
-import DefendMeBuilt from '../Components/DefendMeBuilt.JSX';
+import DefendMeBuilt from '../Components/DefendMeBuilt.jsx';
 import WhatDefendMeProIncludes from '../Components/whyDefenceProIncludes.jsx';
 import EverythingSafe from '../Components/EverythingYouNeedTostaySafe.jsx';
 import FraudDetection from '../Components/FraudDetection.jsx';
