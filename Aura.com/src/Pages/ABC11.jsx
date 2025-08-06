@@ -28,7 +28,7 @@ const ABC11 = () => {
             <section>
               <h2>🎯 Scam Mechanics</h2>
               <p>
-                She was told her funds were missing and directed to store after store, buying gift
+                She was told  funds were missing and directed to store after store, buying gift
                 cards and sharing the PINs. Almost $3,000 vanished before she realized the truth.
               </p>
             </section>
