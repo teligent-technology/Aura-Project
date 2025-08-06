@@ -23,6 +23,8 @@ const Footer = () => {
   }, []);
   return (
     <>
+    <div className="footer-fixed-wrapper">
+
     <section className="aura-graph-section">
       <Container>
         <Row className="align-items-center">
@@ -197,6 +199,8 @@ const Footer = () => {
 
     <AllSection/>
     {/* <Disclaimer/> */}
+        </div>
+
     </>
   );
 };

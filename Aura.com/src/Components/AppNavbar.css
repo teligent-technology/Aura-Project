@@ -20,7 +20,9 @@
 
 
 .aura-navbar {
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  
   top: 0;
   z-index: 1050; /* Increased from 1030 */
   padding: 1rem 2rem;
