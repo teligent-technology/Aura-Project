@@ -17,7 +17,7 @@ import PrivacyPolicy from './Components/PrivacyPolicy';
 import Terms from './Components/Terms';
 import ReturnPolicy from './Components/ReturnPolicy';
 import WhyChooseUs from './Components/WhyChooseUs';
-import ProtectedRoute from './Components/ProtectRoute';
+// import ProtectedRoute from './Components/ProtectRoute';
 import Solution from './Pages/Solution';
 import Resources from './Pages/Resources';
 import HowSaffronWorks from './Pages/HowSaffronWorks';
@@ -47,28 +47,28 @@ const App = () => {
           <Route path="/verify-otp" element={<OtpVerify />} />
 
           {/* Protected Routes */}
-          <Route path="/home" element={<ProtectedRoute><Layout><Home /></Layout></ProtectedRoute>} />
-          <Route path="/features" element={<ProtectedRoute><Layout><Feature /></Layout></ProtectedRoute>} />
-          <Route path="/DefendPro" element={<ProtectedRoute><DefendPro /></ProtectedRoute>} />
-          <Route path="/contact" element={<ProtectedRoute><Layout><Contact /></Layout></ProtectedRoute>} />
-          <Route path="/about" element={<ProtectedRoute><Layout><About /></Layout></ProtectedRoute>} />
-          <Route path="/privacy-policy" element={<ProtectedRoute><Layout><PrivacyPolicy /></Layout></ProtectedRoute>} />
-          <Route path="/terms" element={<ProtectedRoute><Layout><Terms /></Layout></ProtectedRoute>} />
-          <Route path="/return-policy" element={<ProtectedRoute><Layout><ReturnPolicy /></Layout></ProtectedRoute>} />
-          <Route path="/why-us" element={<ProtectedRoute><Layout><WhyChooseUs /></Layout></ProtectedRoute>} />
-          <Route path="/userdashboard" element={<ProtectedRoute><Layout><UserDashboard /></Layout></ProtectedRoute>} />
-          <Route path="/solution" element={<ProtectedRoute><Solution /></ProtectedRoute>} />
-          <Route path="/resources" element={<ProtectedRoute><Resources /></ProtectedRoute>} />
-          <Route path="/HowSaffronWorks" element={<ProtectedRoute><HowSaffronWorks /></ProtectedRoute>} />
-          <Route path="/Fox" element={<ProtectedRoute><Fox /></ProtectedRoute>} />
-          <Route path="/CBS" element={<ProtectedRoute><CBS /></ProtectedRoute>} />
-          <Route path="/ABC11" element={<ProtectedRoute><ABC11 /></ProtectedRoute>} />
-          <Route path="/NewYorkPolice" element={<ProtectedRoute><NewYorkPolice /></ProtectedRoute>} />
-          <Route path="/ABCNational" element={<ProtectedRoute><ABCNational /></ProtectedRoute>} />
-          <Route path="/AccountIn" element={<ProtectedRoute><AccountIn /></ProtectedRoute>} />
-          <Route path="/LearnMore" element={<ProtectedRoute><LearnMore /></ProtectedRoute>} />
-          <Route path="/microsoft-store" element={<ProtectedRoute><MicrosoftStore /></ProtectedRoute>} />
-          <Route path="/internet-security" element={<ProtectedRoute><InternetSecurity /></ProtectedRoute>} />
+          <Route path="/home" element={<Layout><Home /></Layout>} />
+          <Route path="/features" element={<Layout><Feature /></Layout>} />
+          <Route path="/DefendPro" element={<DefendPro />} />
+          <Route path="/contact" element={<Layout><Contact /></Layout>} />
+          <Route path="/about" element={<Layout><About /></Layout>} />
+          <Route path="/privacy-policy" element={<Layout><PrivacyPolicy /></Layout>} />
+          <Route path="/terms" element={<Layout><Terms /></Layout>} />
+          <Route path="/return-policy" element={<Layout><ReturnPolicy /></Layout>} />
+          <Route path="/why-us" element={<Layout><WhyChooseUs /></Layout>} />
+          <Route path="/userdashboard" element={<Layout><UserDashboard /></Layout>} />
+          <Route path="/solution" element={<Solution />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/HowSaffronWorks" element={<HowSaffronWorks />} />
+          <Route path="/Fox" element={<Fox />} />
+          <Route path="/CBS" element={<CBS />} />
+          <Route path="/ABC11" element={<ABC11 />} />
+          <Route path="/NewYorkPolice" element={<NewYorkPolice />} />
+          <Route path="/ABCNational" element={<ABCNational />} />
+          <Route path="/AccountIn" element={<AccountIn />} />
+          <Route path="/LearnMore" element={<LearnMore />} />
+          <Route path="/microsoft-store" element={<MicrosoftStore />} />
+          <Route path="/internet-security" element={<InternetSecurity />} />
 
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" />} />
