@@ -1,0 +1,56 @@
+.everything-safe-banner {
+  padding: 60px 20px;
+  /* background: linear-gradient(135deg, #0e172a, #121e36); */
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(0, 230, 255, 0.1);
+  margin: 2rem auto;
+  max-width: 1500px;
+  animation: fadeInUp 1s ease forwards;
+  backdrop-filter: blur(4px);
+}
+
+.reality-point {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  border-left: 4px solid #00e0ff;
+  transition: all 0.3s ease;
+}
+
+.reality-point:hover {
+  background: rgba(0, 224, 255, 0.08);
+  transform: scale(1.015);
+}
+
+.reality-numbers-heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00e0ff;
+  text-shadow: 0 0 8px #00e0ff70;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00e0ff55;
+  }
+  to {
+    text-shadow: 0 0 20px #00e0ffaa;
+  }
+}

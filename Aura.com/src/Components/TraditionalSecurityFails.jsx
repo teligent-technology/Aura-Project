@@ -1,26 +1,57 @@
 // src/Components/TraditionalSecurityFails.js
 import React from 'react';
-import ExpandableSection from './ExpandableSection';
-import './DefendMeBuilt.css'; // use same classes as RealityNumber
+import './TraditionalSecurityFails.css';
 
-const content = (
-  <div className="reality-numbers-wrapper">
-    <h2 className="reality-numbers-heading">❌ Why Traditional Security Falls Short</h2>
+const TraditionalSecurityFails = () => {
+  return (
+    <section className="traditional-fails-section">
+      <div className="traditional-fails-banner">
+        <h2 className="fails-heading">❌ Why Traditional Security Falls Short</h2>
 
-    <div className="reality-point">🛑 It doesn’t block full-screen pop-up scams</div>
-    <div className="reality-point">🛑 It doesn’t detect refund scams or impersonation calls</div>
-    <div className="reality-point">🛑 It doesn’t stop remote access traps</div>
-    <div className="reality-point">🛑 It doesn’t warn you about fake websites</div>
-    <div className="reality-point">🛑 It doesn’t keep up with evolving scam tactics</div>
-    <div className="reality-point">🛑 It doesn’t protect decision-making — only files</div>
-  </div>
-);
+        <div className="fails-point">
+          🛑 It doesn’t block full-screen pop-up scams
+          <p>
+            Fake alerts that freeze your screen and display urgent phone numbers still slip through.
+          </p>
+        </div>
 
-const TraditionalSecurityFails = () => (
-  <ExpandableSection
-    title="❌ Why Traditional Security Falls Short"
-    content={content}
-  />
-);
+        <div className="fails-point">
+          🛑 It doesn’t detect refund scams or impersonation calls
+          <p>
+            Scammers pretending to be from Amazon, Microsoft, or your bank go completely unnoticed.
+          </p>
+        </div>
+
+        <div className="fails-point">
+          🛑 It doesn’t stop remote access traps
+          <p>
+            Tools like AnyDesk and TeamViewer are often misused — traditional security rarely flags them.
+          </p>
+        </div>
+
+        <div className="fails-point">
+          🛑 It doesn’t warn you about fake websites
+          <p>
+            Scammers copy the exact look of PayPal, your bank, or antivirus companies.
+          </p>
+        </div>
+
+        <div className="fails-point">
+          🛑 It doesn’t keep up with evolving scam tactics
+          <p>
+            Most protection relies on signature updates — but scam methods change every week.
+          </p>
+        </div>
+
+        <div className="fails-point">
+          🛑 It doesn’t protect decision-making — only files
+          <p>
+            It can't warn you when you're being manipulated by a voice that sounds trustworthy.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default TraditionalSecurityFails;

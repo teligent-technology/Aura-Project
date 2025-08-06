@@ -5,6 +5,15 @@ import './DefenseMeBusiness.css';
 const DefendMeBusiness = () => {
   return (
     <section className="business-wrapper">
+      {/* Image block */}
+      <div className="business-image-container">
+        <img
+          src="/Hero/DefendMeProForBusiness.png"
+          alt="Cybersecurity for business"
+          className="business-image"
+        />
+      </div>
+
       <h2 className="business-heading">💼 DefendMePro for Business</h2>
       <p className="business-subtitle">Digital Protection that Works Just as Hard as You Do.</p>
 

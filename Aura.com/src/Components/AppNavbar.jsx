@@ -48,6 +48,9 @@ const AppNavbar = () => {
               <NavDropdown.Item as={Link} to="/DefendPro?item=human-support">👤 U.S.-Based Human Support</NavDropdown.Item>
             </NavDropdown>
 
+
+                                <Nav.Link as={Link} to="/Fix-My-Tech">Fix My Tech</Nav.Link>
+
             {/* Software Dropdown */}
             <NavDropdown title="Software" id="software-dropdown">
               <NavDropdown.Item as={Link} to="/microsoft-store">Microsoft Store</NavDropdown.Item>
@@ -61,6 +64,8 @@ const AppNavbar = () => {
               <NavDropdown.Item as={Link} to="/resources">Resources</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+
+
 
           {/* Auth Buttons */}
           <Nav className="aura-auth-buttons">
