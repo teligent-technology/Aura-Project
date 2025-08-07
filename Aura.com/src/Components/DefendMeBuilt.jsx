@@ -1,31 +1,32 @@
 import React from 'react';
-import ExpandableSection from './ExpandableSection';
-import './DefendMeBuilt.css'; // use same class names as RealityNumber
+import './DefendMeBuilt.css'; // Reuse styles and add image layout
 
-const content = (
-  <div className="reality-numbers-wrapper">
-    <h2 className="reality-numbers-heading">🛡️ That’s Why We Built DefendMePro</h2>
+const DefendMeBuilt = () => {
+  return (
+    <section className="defendmepro-banner">
+      <div className="defendmepro-content">
+        <div className="defendmepro-text">
+          <h2 className="reality-numbers-heading">🛡️ That’s Why We Built DefendMePro</h2>
 
-    <div className="reality-point">
-      Real protection for the way scams and hacks actually work today.
-    </div>
-    <div className="reality-point">
-      Scam filters. Browser traps. Remote access blocks. Live scam alerts.
-    </div>
-    <div className="reality-point">
-      Defense against hacking attempts.
-    </div>
-    <div className="reality-point">
-      All backed by real human experts — not just AI
-    </div>
-    <div className="reality-point">
-      Because smart security should protect people, not just devices.
-    </div>
-  </div>
-);
+          <p className="reality-paragraph">
+            Real protection for the way scams and hacks actually work today. Scam filters. Browser traps. Remote access blocks. Live scam alerts.
+          </p>
 
-const DefendMeBuilt = () => (
-  <ExpandableSection title="🛡️ That’s Why We Built DefendMePro" content={content} />
-);
+          <p className="reality-paragraph">
+            Defense against hacking attempts. All backed by real human experts — not just AI.
+          </p>
+
+          <p className="reality-paragraph">
+            Because smart security should protect people, not just devices.
+          </p>
+        </div>
+
+        <div className="defendmepro-image">
+          <img src="/Hero/DefenceMeBuilt.png" alt="DefendMePro Illustration" />
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default DefendMeBuilt;
