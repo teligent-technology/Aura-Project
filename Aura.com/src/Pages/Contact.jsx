@@ -17,12 +17,12 @@ const Contact = () => {
             <Col md={6} className="text-center contact-box">
               <h4>📞 Call Us</h4>
               <p className="contact-info">
-                <a href="tel:+18551234567">+1 (855) 123-4567</a>
+                <a href="tel:+18551234567">+8443134987</a>
               </p>
 
               <h4>📧 Email Us</h4>
               <p className="contact-info">
-                <a href="mailto:support@saffronsecure.com">support@saffronsecure.com</a>
+                <a href="mailto:support@saffronsecure.com">CustomerSupport@saffronGuru.com</a>
               </p>
 
               <p className="availability">Available daily: 9am – 9pm EST</p>
