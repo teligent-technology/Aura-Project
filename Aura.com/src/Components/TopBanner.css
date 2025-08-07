@@ -1,17 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* ✅ Base Styling */
 .top-banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(
-    90deg,
-    #e8f4f9,
-    #d9f7e3,
-    #e0f5ff,
-    #f0f4ff
-  );
+  background: linear-gradient(90deg, #e8f4f9, #d9f7e3, #e0f5ff, #f0f4ff);
   margin: 0;
   padding: 0.5rem 1rem;
   font-family: 'Poppins', sans-serif;
@@ -67,35 +60,34 @@
   text-decoration: underline;
 }
 
-/* ✅ Mobile View Fix */
+/* ✅ MOBILE VIEW - Hide left/right, optimize center */
 @media (max-width: 768px) {
   .top-banner {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 0.8rem 1rem;
     font-size: 0.88rem;
     text-align: center;
-    gap: 0.7rem;
+    gap: 0.6rem;
   }
 
   .banner-left,
   .banner-right {
-    display: none !important; /* ✅ Hides "For You" and "For Business" */
+    display: none !important;
   }
 
   .banner-message {
-    width: 95%; /* ✅ Wider paragraph */
+    width: 100%;
     font-size: 1rem;
     line-height: 1.6;
     padding: 0.3rem 0.5rem;
-    text-align: center;
     color: #222;
     word-break: break-word;
   }
 }
 
-/* ✅ Tablet View Optimization */
+/* ✅ Tablet Optimization */
 @media (min-width: 769px) and (max-width: 991px) {
   .top-banner {
     font-size: 0.9rem;
