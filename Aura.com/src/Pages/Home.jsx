@@ -22,40 +22,34 @@ const Hero = () => {
 
     
       {/* HERO SECTION */}
-      <section className="aura-hero-section d-flex align-items-center">
-        <Container>
-          <Row className="align-items-center">
-            <Col md={6} className="aura-hero-left-col">
-              <h1 className="aura-hero-title fade-in-1">
-                Complete <br />
-                Online Protection <br />
-              </h1>
-              <strong>
-                Remote + On-Site IT Support for Homes and Small Businesses
-              </strong>
-              <p className="aura-hero-description fade-in-2">
-                From tech troubles to identity theft to scam protection — we
-                secure your home & business with AI-powered tools and real
-                human support. Works across all your devices.
-              </p>
-            </Col>
-            <Col
-              md={6}
-              className="aura-hero-right-col d-flex justify-content-center"
-            >
-   <div className="aura-mobile-app-container fade-in-4">
-  <div className="aura-mockup-glow-ring"></div>
-  <img
-    src="/Hero/Header Banner Img.png"
-    alt="iPhone showing Aura app"
-    className="aura-iphone-mockup"
-  />
-</div>
-
-            </Col>
-          </Row>
-        </Container>
-      </section>
+       <section className="aura-hero-section d-flex align-items-center">
+      <Container>
+        <Row className="align-items-center">
+          <Col md={6} className="aura-hero-left-col">
+            <h1 className="aura-hero-title fade-in-top">
+              Complete <br />
+              Online Protection
+            </h1>
+            <strong className="aura-hero-subheadline glow-text">
+              Remote + On-Site IT Support for Homes and Small Businesses
+            </strong>
+            <p className="aura-hero-description fade-in-bottom">
+              From tech troubles to identity theft to scam protection — we secure your home & business with AI-powered tools and real human support. Works across all your devices.
+            </p>
+          </Col>
+          <Col md={6} className="aura-hero-right-col d-flex justify-content-center">
+            <div className="aura-mobile-app-container float-in">
+              <div className="aura-mockup-glow-ring pulse-ring"></div>
+              <img
+                src="/Hero/Header Banner Img.png"
+                alt="App Preview"
+                className="aura-iphone-mockup hover-tilt"
+              />
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </section>
 <section className="py-4 bg-light trust-section">
   <Container className="trust-narrow-container">
     <Row className="text-center justify-content-center gx-3 gy-4">
