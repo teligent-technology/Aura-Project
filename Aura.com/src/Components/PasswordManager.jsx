@@ -15,20 +15,13 @@ const content = (
       You stay protected, and everything stays private — exactly how it should be.
     </div>
 
-    <div className="reality-point">
-      🖥️ Antivirus & Device Security<br />
-      Hackers don’t need your password — they just need one weak device.<br />
-      That’s how malware, spyware, and silent keyloggers take over.<br />
-      DefendMePro goes beyond basic antivirus.<br />
-      We configure real-time protection to block dangerouss, disable risky system entry points, and shut the door on remote takeovers — before damage is done.<br />
-      No tech skills needed. We lock it down for you.
-    </div>
+   
   </div>
 );
 
 const PasswordManager = () => (
   <ExpandableSection
-    title="🔑 Password Manager & 🖥️ Antivirus & Device Security"
+    title="🔑 Password Manager"
     content={content}
   />
 );

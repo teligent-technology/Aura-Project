@@ -9,22 +9,23 @@ const content = (
 
     <div className="reality-point">
       Scammers don’t just go after your data — they go straight for your money.
-    </div>
-
-    <div className="reality-point">
+    <div>
+      <br />
       People have lost their life savings, emptied their retirement accounts, and even ended up homeless after falling for the wrong message or voice.
-    </div>
-
-    <div className="reality-point">
+  </div>
+  <br />
+      <div>
       DefendMePro helps protect your finances by detecting suspicious activity, guiding you away from fake transactions, and alerting you to payment-related scams before it’s too late.
     </div>
-
-    <div className="reality-point">
+    <br />
+      <div>
       Whether it’s a fake invoice, a refund trap, or a convincing impersonation of your bank or payment app — we’re watching for the red flags, so you don’t miss them.
-    </div>
-
-    <div className="reality-point">
+   </div>
+   <br />
+<div>
       We don’t just protect your devices — we protect what matters most: your financial future.
+      </div>
+      <br />
     </div>
   </div>
 );

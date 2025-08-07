@@ -12,6 +12,7 @@ import ScamProtection from '../Components/ScamProtection.jsx';
 import ScamAlertsHub from '../Components/ScamAlertHub.jsx';
 import FinancialSecurity from '../Components/FinancialSecurity.jsx';
 import PasswordManager from '../Components/PasswordManager.jsx';
+import Antivirus from '../Components/Antivirus.jsx';
 import VpnPrivacy from '../Components/VPN.jsx';
 import SpamCallProtection from '../Components/SpamCallProtection.jsx';
 import LiveSupport from '../Components/LiveSupport.jsx';
@@ -81,6 +82,7 @@ const DefendMePro = () => {
 <ScamAlertsHub/>
 <FinancialSecurity/>
 <PasswordManager/>
+<Antivirus/>
 <VpnPrivacy/>
 <SpamCallProtection/>
 <LiveSupport/>
