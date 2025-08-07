@@ -106,8 +106,10 @@
 }
 
 /* === Brand === */
-.aura-brand {
+.SaffronLogo-brand {
   font-size: 1.65rem;
+  height: 100px;
+  width: 100px;
   font-weight: 700;
   color: #ffffff !important;
   letter-spacing: 0.25em;
@@ -315,7 +317,8 @@
 
 
 .saffronGuru-logo {
-  height: 100px;
+  height: 160px;
+  margin-top: -30px;
   width: 120px;
   object-fit: contain;
   transition: transform 0.3s ease;

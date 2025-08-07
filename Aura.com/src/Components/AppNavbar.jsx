@@ -25,7 +25,7 @@ const AppNavbar = () => {
   return (
     <Navbar expand="lg" sticky="top" className={`aura-navbar ${fadeIn ? 'fade-in-blur' : ''}`}>
       <Container className="container">
-<Navbar.Brand as={Link} to="/" className="aura-brand">
+<Navbar.Brand as={Link} to="/" className="SaffronLogo-brand">
   <img src="/Hero/SaffronGuruLogo.png" alt="Aura Logo" className="saffronGuru-logo" />
 </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
