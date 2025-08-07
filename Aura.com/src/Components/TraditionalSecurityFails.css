@@ -200,7 +200,6 @@
   align-items: flex-start;
   gap: 1.2rem; /* 🔽 Reduce this for less spacing */
   flex-wrap: wrap;
-  padding: 0; /* ✅ Remove padding to fit better inside page layout */
 }
 
 
