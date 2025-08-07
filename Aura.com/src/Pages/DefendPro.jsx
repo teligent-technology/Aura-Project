@@ -25,16 +25,23 @@ const DefendMePro = () => {
 
       {/* ✨ Hero Banner */}
       <section className="hero-banner">
-        <div className="hero-content">
-          <h1 className="hero-title">
-            Protection Built for the Real World — Not Just Viruses.
-          </h1>
-          <p className="hero-subtitle">
-            <strong>DefendMePro</strong> shields you from scams, identity theft, fraud,
-            remote hacking, and digital traps that traditional security misses.
-          </p>
-        </div>
-      </section>
+  <div className="hero-horizontal-container">
+    <img src="/Hero/Captain.webp" alt="Shield" className="hero-logo" />
+    <h1 className="hero-title-right">DefendMePro™</h1>
+  </div>
+
+  <div className="hero-content">
+    <h2 className="hero-heading">
+      Protection Built for the Real World — Not Just Viruses.
+    </h2>
+    <p className="hero-subtext">
+      <strong>DefendMePro</strong> shields you from scams, identity theft, fraud,
+      remote hacking, and digital traps that traditional security misses.
+    </p>
+  </div>
+</section>
+
+
 
       {/* 💡 Storytelling Paragraph Section */}
      <section className="scam-banner">
@@ -45,7 +52,7 @@ const DefendMePro = () => {
       </h2>
       <p className="scam-banner-para">
         Hackers don’t send viruses anymore — <span>they send fake logins, refund scams, and remote traps.</span>  
-        <strong>We shut it all down.</strong>
+        <strong> We shut it all down.</strong>
       </p>
       <p className="scam-banner-para">
         Today’s scams don’t just use <span>code</span> — they use <span>people</span>.

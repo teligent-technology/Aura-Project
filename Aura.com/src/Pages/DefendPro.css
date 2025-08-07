@@ -195,3 +195,81 @@
 }
 
 
+.hero-banner {
+  background: linear-gradient(145deg, #0a0f1d, #101d3a);
+  padding: 4rem 2rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-horizontal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-logo {
+  width: 120px;
+  height: auto;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 0 30px rgba(0, 255, 255, 0.2));
+}
+
+.hero-logo:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.hero-title-right {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00f0ff;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+  margin: 0;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  padding: 2rem;
+  animation: fadeUp 1s ease-out;
+}
+
+.hero-heading {
+  font-size: 2rem;
+  color: #00e0ff;
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.hero-subtext {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d0eaff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-horizontal-container {
+    flex-direction: column;
+  }
+
+  .hero-title-right {
+    margin-top: 1rem;
+  }
+
+  .hero-content {
+    padding: 1.5rem;
+  }
+}
+
+
+
