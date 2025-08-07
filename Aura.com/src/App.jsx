@@ -30,6 +30,7 @@ import AccountIn from './Pages/AccountIn';
 import MicrosoftStore from './Pages/MicrosoftStore';
 import InternetSecurity from './Pages/InternetSecurity';
 import LearnMore from './Pages/LearnMore';
+import FixMyTech from './Pages/FixMyTech';
 
 const App = () => {
   useEffect(() => {
@@ -69,6 +70,7 @@ const App = () => {
           <Route path="/LearnMore" element={<LearnMore />} />
           <Route path="/microsoft-store" element={<MicrosoftStore />} />
           <Route path="/internet-security" element={<InternetSecurity />} />
+          <Route path="/FixMyTech" element={<FixMyTech />} />
 
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" />} />

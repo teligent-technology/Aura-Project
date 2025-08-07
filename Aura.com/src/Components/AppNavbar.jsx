@@ -53,7 +53,7 @@ const AppNavbar = () => {
             </NavDropdown>
 
 
-                                <Nav.Link as={Link} to="/Fix-My-Tech">Fix My Tech</Nav.Link>
+                                <Nav.Link as={Link} to="/FixMyTech">Fix My Tech</Nav.Link>
 
             {/* Software Dropdown */}
             <NavDropdown title="Software" id="software-dropdown">
