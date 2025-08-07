@@ -314,3 +314,13 @@
 }
 
 
+.saffronGuru-logo {
+  height: 100px;
+  width: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.saffronGuru-logo:hover {
+  transform: scale(1.05) rotate(-1deg);
+}
