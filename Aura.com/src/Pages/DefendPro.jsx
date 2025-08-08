@@ -27,7 +27,7 @@ const DefendMePro = () => {
       {/* ✨ Hero Banner */}
       <section className="hero-banner">
   <div className="hero-horizontal-container">
-    <img src="/Hero/Captain.webp" alt="Shield" className="hero-logo" />
+    <img src="/Hero/shield.png" alt="Shield" className="hero-logo" />
     <h1 className="hero-title-right">DefendMePro™</h1>
   </div>
 

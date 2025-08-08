@@ -25,7 +25,7 @@ const Contact = () => {
                 <a href="mailto:support@saffronsecure.com">CustomerSupport@SaffronGuru.com</a>
               </p>
 
-              <p className="availability">Available daily: 9am – 9pm EST</p>
+              <p className="availability">Available daily: 9AM – 12PM EST</p>
             </Col>
           </Row>
         </Container>
