@@ -1,5 +1,5 @@
 import React from 'react';
-import './PrinterSetubTroubleSHooting.css';
+import './PrinterSetubTroubleShooting.css';
 
 const PrinterSupport = () => {
   return (
