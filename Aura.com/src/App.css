@@ -12,3 +12,8 @@ html, body, #root {
   width: 100%;
   overflow-x: hidden;
 }
+
+body {
+  padding-top: 80px; /* Adjust to match navbar height */
+}
+

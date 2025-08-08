@@ -30,8 +30,8 @@ import AccountIn from './Pages/AccountIn';
 import MicrosoftStore from './Pages/MicrosoftStore';
 import InternetSecurity from './Pages/InternetSecurity';
 import LearnMore from './Pages/LearnMore';
-import FixMyTech from './Pages/FixMyTech';
-
+import ForYourBusiness from './Pages/ForYourBusiness';
+import ForYourHome from './Pages/ForYourHome';
 const App = () => {
   useEffect(() => {
     keepAlive(); // 👈 Prevent Render from sleeping
@@ -70,8 +70,8 @@ const App = () => {
           <Route path="/LearnMore" element={<LearnMore />} />
           <Route path="/microsoft-store" element={<MicrosoftStore />} />
           <Route path="/internet-security" element={<InternetSecurity />} />
-          <Route path="/FixMyTech" element={<FixMyTech />} />
-
+          <Route path="/ForYourBusiness" element={<ForYourBusiness />} />
+          <Route path="/ForYourHome" element={<ForYourHome />} />
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

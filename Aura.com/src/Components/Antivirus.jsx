@@ -1,5 +1,5 @@
 // src/Components/Antivirus.jsx
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import ExpandableSection from './ExpandableSection';
 import './DefendMeBuilt.css'; // shared styling
 
@@ -18,11 +18,24 @@ const content = (
   </div>
 );
 
-const Antivirus = () => (
-  <ExpandableSection
-    title="🖥️ Antivirus & Device Security"
-    content={content}
-  />
-);
+const Antivirus = ({ expand }) => {
+  const sectionRef = useRef();
+
+  useEffect(() => {
+    if (expand && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [expand]);
+
+  return (
+    <div id="antivirus" ref={sectionRef}>
+      <ExpandableSection
+        title="🖥️ Antivirus & Device Security"
+        content={content}
+        defaultExpand={expand}
+      />
+    </div>
+  );
+};
 
 export default Antivirus;

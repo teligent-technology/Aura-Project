@@ -1,11 +1,11 @@
 // src/Components/LiveSupport.jsx
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import ExpandableSection from './ExpandableSection';
 import './DefendMeBuilt.css'; // shared styling
 
 const content = (
   <div className="reality-numbers-wrapper">
-    <h2 className="reality-numbers-heading">🧑‍💻 Live Support, 7 Days a Week</h2>
+    <h2 className="reality-numbers-heading">🧑‍💻 Human Support</h2>
 
     <div className="reality-point">
       Real help from real people — whenever you need it.<br />
@@ -25,8 +25,24 @@ const content = (
   </div>
 );
 
-const LiveSupport = () => (
-  <ExpandableSection title="🧑‍💻 Live Support, 7 Days a Week" content={content} />
-);
+const LiveSupport = ({ expand }) => {
+  const sectionRef = useRef();
+
+  useEffect(() => {
+    if (expand && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [expand]);
+
+  return (
+    <div id="human-support" ref={sectionRef}>
+      <ExpandableSection
+        title="🧑‍💻 Live Support, 7 Days a Week"
+        content={content}
+        defaultExpand={expand}
+      />
+    </div>
+  );
+};
 
 export default LiveSupport;

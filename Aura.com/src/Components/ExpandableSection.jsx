@@ -1,9 +1,15 @@
-// src/Components/ExpandableSection.js
-import React, { useState } from 'react';
+// src/Components/ExpandableSection.jsx
+import React, { useEffect, useState } from 'react';
 import './ExpandableSection.css';
 
-const ExpandableSection = ({ title, content }) => {
+const ExpandableSection = ({ title, content, defaultExpand }) => {
   const [expanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    if (defaultExpand) {
+      setExpanded(true);
+    }
+  }, [defaultExpand]);
 
   return (
     <div className="expandable-section">
@@ -11,11 +17,7 @@ const ExpandableSection = ({ title, content }) => {
         {expanded ? '➖ Hide' : '➕ Expand'}
       </button>
       <h2 className="expand-title">{title}</h2>
-      {expanded && (
-        <div className="expand-content">
-          {content}
-        </div>
-      )}
+      {expanded && <div className="expand-content">{content}</div>}
     </div>
   );
 };

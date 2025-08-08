@@ -1,12 +1,11 @@
 // src/Components/FraudDetection.jsx
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import ExpandableSection from './ExpandableSection';
-import './DefendMeBuilt.css'; // reuse same styling
+import './DefendMeBuilt.css'; // Reuse existing styling
 
 const content = (
   <div className="reality-numbers-wrapper">
     <h2 className="reality-numbers-heading">🚫 Fraud Detection</h2>
-
     <div className="reality-point">
       Digital fraud moves fast — from fake transactions to suspicious account activity.<br />
       DefendMePro equips you with proactive fraud monitoring tools that flag unauthorized purchases, financial red flags, and unusual access attempts.<br />
@@ -15,8 +14,24 @@ const content = (
   </div>
 );
 
-const FraudDetection = () => (
-  <ExpandableSection title="🚫 Fraud Detection" content={content} />
-);
+const FraudDetection = ({ expand }) => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    if (expand && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [expand]);
+
+  return (
+    <div ref={sectionRef}>
+      <ExpandableSection
+        title="🚫 Fraud Detection"
+        content={content}
+        defaultExpand={expand}
+      />
+    </div>
+  );
+};
 
 export default FraudDetection;

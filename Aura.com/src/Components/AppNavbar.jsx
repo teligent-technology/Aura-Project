@@ -34,35 +34,108 @@ const AppNavbar = () => {
           <Nav className="mx-auto aura-nav-links">
             <Nav.Link as={Link} to="/home">Home</Nav.Link>
             <Nav.Link as={Link} to="/DefendPro"> DefendMePro™</Nav.Link>
-                        <Nav.Link as={Link} to="/Pricing">Pricing</Nav.Link>
-
+ <NavDropdown title=" SafeSupport Assist™" id=" SafeSupport Assist™" className="custom-dropdown">
+              <NavDropdown.Item as={Link} to="/ForYourHome">For Your Home</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/ForYourBusiness">For Your Business</NavDropdown.Item>
+            </NavDropdown>
 
             {/* Solutions Dropdown */}
-            <NavDropdown title="Solutions" id="solutions-dropdown">
+<NavDropdown title="Solutions" id="solutions-dropdown" className="custom-dropdown">
+
               <NavDropdown.Item as={Link} to="/solution">Protection of our Society</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/DefendPro?item=identity-theft">👤 Identity Theft Protection</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/DefendPro?item=fraud-detection">⚠️ Fraud Detection</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/DefendPro?item=scam-protection">🚫 Scam Protection</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/DefendPro?item=scam-alerts">🔔 Scam Alerts Hub</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/DefendPro?item=financial-security">💰 Financial Security</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/DefendPro?item=password-manager">🔑 Password Manager</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/DefendPro?item=antivirus">🖥️ Antivirus & Device Security</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/DefendPro?item=vpn">🌐 VPN & Online Privacy</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/DefendPro?item=spam-call">📞 Spam Call Protection</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/DefendPro?item=human-support">👤 U.S.-Based Human Support</NavDropdown.Item>
+<NavDropdown.Item
+  onClick={() => {
+    window.location.href = "/DefendPro?item=identity-theft";
+  }}
+>
+  👤 Identity Theft Protection
+</NavDropdown.Item>
+
+<NavDropdown.Item
+  onClick={() => {
+    window.location.href = "/DefendPro?item=fraud-detection";
+  }}
+>
+  ⚠️ Fraud Detection
+</NavDropdown.Item>
+
+<NavDropdown.Item onClick={() => window.location.href = "/DefendPro?item=scam-protection"}>
+  🔔 Scam Protection
+</NavDropdown.Item>
+
+
+<NavDropdown.Item onClick={() => {
+  const timestamp = Date.now();
+  window.location.href = `/DefendPro?item=scam-alerts&t=${timestamp}`;
+}}
+>
+  🔔 Scam Alerts Hub
+</NavDropdown.Item>
+
+<NavDropdown.Item
+  onClick={() => {
+    const timestamp = Date.now();
+    window.location.href = `/DefendPro?item=financial-security&t=${timestamp}`;
+  }}
+>
+  💰 Financial Security
+</NavDropdown.Item>
+
+              <NavDropdown.Item
+  onClick={() => {
+    window.location.href = "/DefendPro?item=password-manager";
+  }}
+>
+  🔑 Password Manager
+</NavDropdown.Item>
+
+<NavDropdown.Item
+  onClick={() => {
+    window.location.href = "/DefendPro?item=antivirus";
+  }}
+>
+  🖥️ Antivirus & Device Security
+</NavDropdown.Item>
+
+<NavDropdown.Item
+  onClick={() => {
+    window.location.href = "/DefendPro?item=vpn";
+  }}
+>
+  🌐 VPN & Online Privacy
+</NavDropdown.Item>
+
+<NavDropdown.Item
+  onClick={() => {
+    window.location.href = "/DefendPro?item=spam-call";
+  }}
+>
+  📞 Spam Call Protection
+</NavDropdown.Item>
+
+<NavDropdown.Item
+  onClick={() => {
+    window.location.href = "/DefendPro?item=human-support";
+  }}
+>
+  👤 Human support
+</NavDropdown.Item>
+
             </NavDropdown>
 
 
-                                <Nav.Link as={Link} to="/FixMyTech">Fix My Tech</Nav.Link>
 
             {/* Software Dropdown */}
-            <NavDropdown title="Software" id="software-dropdown">
+            <NavDropdown title="Software" id="software-dropdown" className="custom-dropdown">
               <NavDropdown.Item as={Link} to="/microsoft-store">Microsoft Store</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/internet-security">Internet Security</NavDropdown.Item>
             </NavDropdown>
 
+                                    <Nav.Link as={Link} to="/Pricing">Pricing</Nav.Link>
+
+
             {/* Knowledge Center Dropdown */}
-            <NavDropdown title="Knowledge Center" id="knowledge-dropdown">
+            <NavDropdown title="Knowledge Center" id="knowledge-dropdown" className="custom-dropdown">
               <NavDropdown.Item as={Link} to="/about">About</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/HowSaffronWorks">How Saffron Works</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/resources">Resources</NavDropdown.Item>

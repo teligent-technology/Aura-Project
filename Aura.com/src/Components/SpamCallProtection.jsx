@@ -1,5 +1,5 @@
 // src/Components/SpamCallProtection.jsx
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import ExpandableSection from './ExpandableSection';
 import './DefendMeBuilt.css'; // shared styling
 
@@ -15,8 +15,24 @@ const content = (
   </div>
 );
 
-const SpamCallProtection = () => (
-  <ExpandableSection title="📞 Spam Call Protection" content={content} />
-);
+const SpamCallProtection = ({ expand }) => {
+  const sectionRef = useRef();
+
+  useEffect(() => {
+    if (expand && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [expand]);
+
+  return (
+    <div id="spam-call" ref={sectionRef}>
+      <ExpandableSection
+        title="📞 Spam Call Protection"
+        content={content}
+        defaultExpand={expand}
+      />
+    </div>
+  );
+};
 
 export default SpamCallProtection;

@@ -1,5 +1,5 @@
 // src/Components/VpnPrivacy.jsx
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import ExpandableSection from './ExpandableSection';
 import './DefendMeBuilt.css'; // shared styling reused
 
@@ -15,8 +15,24 @@ const content = (
   </div>
 );
 
-const VpnPrivacy = () => (
-  <ExpandableSection title="🌐 VPN & Online Privacy" content={content} />
-);
+const VpnPrivacy = ({ expand }) => {
+  const sectionRef = useRef();
+
+  useEffect(() => {
+    if (expand && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [expand]);
+
+  return (
+    <div id="vpn" ref={sectionRef}>
+      <ExpandableSection
+        title="🌐 VPN & Online Privacy"
+        content={content}
+        defaultExpand={expand}
+      />
+    </div>
+  );
+};
 
 export default VpnPrivacy;

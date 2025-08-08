@@ -1,16 +1,14 @@
 // src/Components/ScamProtection.jsx
 import React from 'react';
 import ExpandableSection from './ExpandableSection';
-import './DefendMeBuilt.css'; // same styling reused
+import './DefendMeBuilt.css';
 
 const content = (
   <div className="reality-numbers-wrapper">
     <h2 className="reality-numbers-heading">🔔 Scam Protection</h2>
-
     <div className="reality-point">
       Scams today don’t look like scams. They look like Amazon refund calls, Microsoft pop-ups, or emails pretending to be from your bank.
     </div>
-
     <div className="reality-point">
       DefendMePro protects you through layered defense:
       <ul className="bullet-list">
@@ -25,8 +23,10 @@ const content = (
   </div>
 );
 
-const ScamProtection = () => (
-  <ExpandableSection title="🔔 Scam Protection" content={content} />
+const ScamProtection = ({ expand, scrollRef }) => (
+  <div ref={scrollRef}>
+    <ExpandableSection title="🔔 Scam Protection" content={content} defaultExpand={expand} />
+  </div>
 );
 
 export default ScamProtection;

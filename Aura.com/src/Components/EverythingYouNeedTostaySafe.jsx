@@ -1,9 +1,22 @@
-import React from 'react';
+// src/Components/EverythingSafe.jsx
+import React, { useEffect, useRef } from 'react';
 import './EverythingYouNeedTostay.css'; // Same styling reused
 
-const EverythingSafe = () => {
+const EverythingSafe = ({ expand }) => {
+  const sectionRef = useRef();
+
+  useEffect(() => {
+    if (expand && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [expand]);
+
   return (
-    <section className="everything-safe-banner">
+    <section
+      id="identity-theft"
+      className="everything-safe-banner"
+      ref={sectionRef}
+    >
       <div className="everything-safe-wrapper">
         {/* ✅ Left: Image */}
         <div className="everything-safe-image">

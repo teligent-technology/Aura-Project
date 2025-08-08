@@ -21,19 +21,21 @@
 
 
 
+/* AppNavbar.css */
 .aura-navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1050; /* Increased from 1030 */
-  padding: 1rem 2rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  font-family: 'Poppins', sans-serif;
-  background-color: transparent;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  overflow: visible !important; /* ✅ Fix this line */
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+
+  background: rgba(15, 23, 42, 0.95); /* or your existing background */
+  backdrop-filter: blur(15px);        /* optional: soft blur effect */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.4s ease;
 }
+
 
 
 /* === Layered Animated Background === */
@@ -328,4 +330,44 @@
 
 .saffronGuru-logo:hover {
   transform: scale(1.05) rotate(-1deg);
+}
+
+
+/* ===== Custom Dropdown Styling ===== */
+.custom-dropdown .dropdown-menu {
+  background: linear-gradient(145deg, #0a0f24, #0c132c);
+  border-radius: 16px;
+  padding: 10px 0;
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 255, 255, 0.1);
+  animation: fadeDropdown 0.3s ease-in-out;
+  backdrop-filter: blur(12px);
+}
+
+.custom-dropdown .dropdown-menu .dropdown-item {
+  color: #00e0ff;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 10px;
+}
+
+.custom-dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+  color: #ffffff;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Smooth dropdown animation */
+@keyframes fadeDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

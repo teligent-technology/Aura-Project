@@ -1,6 +1,9 @@
 // src/Pages/DefendMePro.js
 import React from 'react';
 import AppNavbar from '../Components/AppNavbar.jsx'
+import { useSearchParams } from 'react-router-dom'; // ✅ import here
+import { useEffect, useRef } from 'react';
+
 import AllSection from '../Components/AllSection.jsx'
 import RealityNumber from '../Components/RealityNumber.jsx';
 import TraditionalSecurityFails from '../Components/TraditionalSecurityFails.jsx'
@@ -20,6 +23,18 @@ import DefendMeBusiness from '../Components/DefenseMeBusiness.jsx';
 import './DefendPro.css';
 
 const DefendMePro = () => {
+const [searchParams] = useSearchParams();
+  const scamRef = useRef(null);
+  const fraudRef = useRef(null);
+
+  useEffect(() => {
+    const item = searchParams.get('item');
+    if (item === 'scam-protection' && scamRef.current) {
+      scamRef.current.scrollIntoView({ behavior: 'smooth' });
+    } else if (item === 'fraud-detection' && fraudRef.current) {
+      fraudRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [searchParams]);
   return (
     <>
       <AppNavbar />
@@ -76,16 +91,59 @@ const DefendMePro = () => {
 <TraditionalSecurityFails/>
 <DefendMeBuilt/>
 <WhatDefendMeProIncludes/>
-<EverythingSafe/>
-<FraudDetection/>
-<ScamProtection/>
-<ScamAlertsHub/>
-<FinancialSecurity/>
-<PasswordManager/>
-<Antivirus/>
-<VpnPrivacy/>
-<SpamCallProtection/>
-<LiveSupport/>
+<EverythingSafe
+  expand={searchParams.get('item') === 'identity-theft'}
+  key={searchParams.get('item') === 'identity-theft' ? 'identity-theft' : 'none'}
+/>
+
+<FraudDetection
+  expand={searchParams.get('item') === 'fraud-detection'}
+  key={searchParams.get('item') === 'fraud-detection' ? 'fraud' : 'none'}
+/>
+
+<ScamProtection
+        expand={searchParams.get('item') === 'scam-protection'}
+        scrollRef={scamRef}
+        key={searchParams.get('item') === 'scam-protection' ? 'scam' : 'none'}
+      />
+
+
+
+<ScamAlertsHub
+  expand={searchParams.get('item') === 'scam-alerts'}
+  key={searchParams.get('item') === 'scam-alerts' ? 'scam-alerts' : 'none'}
+/>
+
+<FinancialSecurity
+  expand={searchParams.get('item') === 'financial-security'}
+  key={searchParams.get('item') === 'financial-security' ? 'finance' : 'none'}
+/>
+
+<PasswordManager
+  expand={searchParams.get('item') === 'password-manager'}
+  key={searchParams.get('item') === 'password-manager' ? 'pm' : 'none'}
+/>
+
+<Antivirus
+  expand={searchParams.get('item') === 'antivirus'}
+  key={searchParams.get('item') === 'antivirus' ? 'antivirus' : 'none'}
+/>
+
+<VpnPrivacy
+  expand={searchParams.get('item') === 'vpn'}
+  key={searchParams.get('item') === 'vpn' ? 'vpn' : 'none'}
+/>
+
+<SpamCallProtection
+  expand={searchParams.get('item') === 'spam-call'}
+  key={searchParams.get('item') === 'spam-call' ? 'spam' : 'none'}
+/>
+
+<LiveSupport
+  expand={searchParams.get('item') === 'human-support'}
+  key={searchParams.get('item') === 'human-support' ? 'support' : 'none'}
+/>
+
 <DefendMeBusiness/>
       <AllSection />
     </>

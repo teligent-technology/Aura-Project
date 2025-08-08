@@ -1,5 +1,5 @@
 // src/Components/ScamAlertsHub.jsx
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import ExpandableSection from './ExpandableSection';
 import './DefendMeBuilt.css'; // same shared styling
 
@@ -21,12 +21,27 @@ const content = (
         To warn you before the scam reaches you.
       </div>
     </div>
-
   </div>
 );
 
-const ScamAlertsHub = () => (
-  <ExpandableSection title="🔔 Scam Alerts Hub" content={content} />
-);
+const ScamAlertsHub = ({ expand }) => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    if (expand && sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [expand]);
+
+  return (
+    <div ref={sectionRef}>
+      <ExpandableSection
+        title="🔔 Scam Alerts Hub"
+        content={content}
+        defaultExpand={expand}
+      />
+    </div>
+  );
+};
 
 export default ScamAlertsHub;

@@ -139,14 +139,14 @@ const Footer = () => {
 <ul className="defend-feature-list">
   <li><Link to="/DefendPro?item=identity-theft"><span>👤</span> Identity Theft Protection</Link></li>
   <li><Link to="/DefendPro?item=fraud-detection"><span>⚠️</span> Fraud Detection</Link></li>
-  <li><Link to="/DefendPro?item=scam"><span>🚫</span> Scam Protection</Link></li> 
+  <li><Link to="/DefendPro?item=scam-protection"><span>🚫</span> Scam Protection</Link></li> 
   <li><Link to="/DefendPro?item=scam-alerts"><span>🔔</span> Scam Alerts Hub</Link></li>
-  <li><Link to="/DefendPro?item=financial"><span>💰</span> Financial Security</Link></li>
-  <li><Link to="/DefendPro?item=password"><span>🔑</span> Password Manager</Link></li>
+  <li><Link to="/DefendPro?item=financial-security"><span>💰</span> Financial Security</Link></li>
+  <li><Link to="/DefendPro?item=password-manager"><span>🔑</span> Password Manager</Link></li>
   <li><Link to="/DefendPro?item=antivirus"><span>🖥️</span> Antivirus & Device Security</Link></li>
   <li><Link to="/DefendPro?item=vpn"><span>🌐</span> VPN & Online Privacy</Link></li>
-  <li><Link to="/DefendPro?item=spam"><span>📞</span> Spam Call Protection</Link></li> 
-  <li><Link to="/DefendPro?item=support"><span>👤</span> U.S.-Based Human Support</Link></li>
+  <li><Link to="/DefendPro?item=spam-call"><span>📞</span> Spam Call Protection</Link></li> 
+  <li><Link to="/DefendPro?item=human-support"><span>👤</span> U.S.-Based Human Support</Link></li>
 </ul>
 
 
