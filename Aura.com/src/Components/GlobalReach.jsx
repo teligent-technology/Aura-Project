@@ -1,37 +1,44 @@
 // GlobalReach.jsx
-import React, { useMemo, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Container } from "react-bootstrap";
 import {
   ComposableMap,
   Geographies,
   Geography,
   ZoomableGroup,
-  Marker
-} from 'react-simple-maps';
-import { geoCentroid } from 'd3-geo';
-import './GlobalReach.css';
+  Marker,
+} from "react-simple-maps";
+import { geoCentroid } from "d3-geo";
+import "./GlobalReach.css";
 
-const US_TOPO = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
-const CA_TOPO = "https://raw.githubusercontent.com/deldersveld/topojson/master/countries/canada/canada-provinces.json";
+// World GeoJSON (full world so that US & Canada appear fully)
+const WORLD_GEOJSON =
+  "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson";
+
+// Helper to check US or Canada
+const isUSOrCanada = (name) => {
+  if (!name) return false;
+  const lower = name.toLowerCase();
+  return (
+    lower.includes("united states") || lower === "usa" || lower.includes("canada")
+  );
+};
 
 const GlobalReach = () => {
   const [hoverName, setHoverName] = useState(null);
   const [hoverPos, setHoverPos] = useState({ x: 0, y: 0 });
 
-  // Helpful: keep a memoized list of centroid coords for each feature
+  // ✅ Safe marker builder
   const buildMarkers = (features) =>
     features
+      .filter((f) => isUSOrCanada(f.properties.name))
       .map((f) => {
         try {
-          const [lng, lat] = geoCentroid(f);
-          if (!isFinite(lng) || !isFinite(lat)) return null;
-          const name =
-            f.properties?.name ||
-            f.properties?.NAME_1 ||
-            f.properties?.NAME ||
-            f.id ||
-            "Region";
-          return { name, coordinates: [lng, lat] };
+          if (!f.geometry || !f.geometry.coordinates) return null; // skip invalid
+          const centroid = geoCentroid(f);
+          if (!Array.isArray(centroid) || centroid.length !== 2) return null;
+          const [lng, lat] = centroid;
+          return { name: f.properties.name, coordinates: [lng, lat] };
         } catch {
           return null;
         }
@@ -42,9 +49,10 @@ const GlobalReach = () => {
     <section className="global-reach-section">
       <div className="global-bg-blobs" />
       <Container className="text-center">
-        <h2 className="global-heading">Serving the US and Canada </h2>
+        <h2 className="global-heading">Serving the US and Canada</h2>
         <p className="global-subtext">
-          Protecting <span className="highlight">Over 100,000 Devices Secured.</span>
+          Protecting{" "}
+          <span className="highlight">Over 100,000 Devices Secured.</span>
         </p>
 
         <div
@@ -55,70 +63,68 @@ const GlobalReach = () => {
         >
           <ComposableMap
             projection="geoAlbers"
-            className="world-map"
+            projectionConfig={{
+              scale: 800, // zoom level adjust
+            }}
             style={{ width: "100%", height: "auto" }}
           >
+            {/* ✅ Centered & zoomed for full view */}
             <ZoomableGroup
-              zoom={1}
-              center={[-100, 50]} // nicely centers US + Canada
-              minZoom={0.8}
-              maxZoom={4}
+              center={[-95, 55]} // roughly center of US & Canada
+              zoom={1} // 1 = full view, adjust if needed
+              disablePanning // prevent manual move
             >
-              {/* United States states */}
-              <Geographies geography={US_TOPO}>
+              <Geographies geography={WORLD_GEOJSON}>
                 {({ geographies }) => {
-                  const markers = buildMarkers(geographies);
-                  return (
-                    <>
-                      {geographies.map((geo) => (
-                        <Geography
-                          key={geo.rsmKey}
-                          geography={geo}
-                          onMouseEnter={() =>
-                            setHoverName(
-                              geo.properties?.name ||
-                                geo.properties?.NAME ||
-                                "State"
-                            )
-                          }
-                          onMouseLeave={() => setHoverName(null)}
-                          className="geo-shape"
-                        />
-                      ))}
-                      {markers.map((m, idx) => (
-                        <Marker key={`us-${idx}`} coordinates={m.coordinates}>
-                          <circle className="dot dot-pulse" r={2.6} />
-                        </Marker>
-                      ))}
-                    </>
+                  const filtered = geographies.filter((geo) =>
+                    isUSOrCanada(geo.properties.name)
                   );
-                }}
-              </Geographies>
 
-              {/* Canada provinces */}
-              <Geographies geography={CA_TOPO}>
-                {({ geographies }) => {
-                  const markers = buildMarkers(geographies);
+                  const markers = buildMarkers(filtered);
+
                   return (
                     <>
-                      {geographies.map((geo) => (
+                      {/* Country Shapes */}
+                      {filtered.map((geo) => (
                         <Geography
                           key={geo.rsmKey}
                           geography={geo}
-                          onMouseEnter={() =>
-                            setHoverName(
-                              geo.properties?.name ||
-                                geo.properties?.NAME_1 ||
-                                "Province"
-                            )
-                          }
+                          onMouseEnter={() => setHoverName(geo.properties.name)}
                           onMouseLeave={() => setHoverName(null)}
-                          className="geo-shape ca-shape"
+                          style={{
+                            default: {
+                              fill: geo.properties.name
+                                .toLowerCase()
+                                .includes("canada")
+                                ? "#32CD32" // Canada green
+                                : "#1E90FF", // US blue
+                              stroke: "#fff",
+                              strokeWidth: 0.5,
+                              outline: "none",
+                            },
+                            hover: {
+                              fill: "#FFD700",
+                              stroke: "#fff",
+                              strokeWidth: 0.8,
+                              outline: "none",
+                            },
+                          }}
                         />
                       ))}
+
+                      {/* Markers */}
                       {markers.map((m, idx) => (
-                        <Marker key={`ca-${idx}`} coordinates={m.coordinates}>
-                          <circle className="dot dot-pulse" r={2.6} />
+                        <Marker key={idx} coordinates={m.coordinates}>
+                          <g className="label-marker">
+                            <circle className="dot dot-pulse" r={2.6} />
+                            <text
+                              className="geo-label"
+                              y={-7}
+                              textAnchor="middle"
+                            >
+                              {m.name}
+                            </text>
+                          </g>
                         </Marker>
                       ))}
                     </>

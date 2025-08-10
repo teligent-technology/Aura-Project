@@ -90,3 +90,27 @@
     padding: 1rem;
   }
 }
+
+.why-bottom-tagline {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e2f0ff;
+  background: linear-gradient(90deg, rgba(0, 180, 255, 0.08), rgba(0, 255, 200, 0.08));
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 200, 255, 0.15);
+  transition: all 0.4s ease;
+}
+
+.why-bottom-tagline strong {
+  color: #00e0ff;
+  font-weight: 700;
+}
+
+.why-bottom-tagline:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 28px rgba(0, 255, 200, 0.25);
+}
+

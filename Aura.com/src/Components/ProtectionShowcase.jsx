@@ -6,7 +6,7 @@ const ProtectionShowcase = () => {
   const rootRef = useRef(null);
   const imgCardRef = useRef(null);
 
-  // Scroll reveal
+  // Scroll reveal animation
   useEffect(() => {
     const el = rootRef.current;
     if (!el) return;
@@ -22,7 +22,7 @@ const ProtectionShowcase = () => {
     return () => io.disconnect();
   }, []);
 
-  // Subtle 3D tilt on mouse move
+  // 3D tilt effect
   useEffect(() => {
     const card = imgCardRef.current;
     if (!card) return;
@@ -32,7 +32,7 @@ const ProtectionShowcase = () => {
       const cy = r.top + r.height / 2;
       const dx = (e.clientX - cx) / (r.width / 2);
       const dy = (e.clientY - cy) / (r.height / 2);
-      card.style.transform = `rotateX(${(-dy * 6).toFixed(2)}deg) rotateY(${(dx * 8).toFixed(2)}deg) translateZ(0)`;
+      card.style.transform = `rotateX(${(-dy * 6).toFixed(2)}deg) rotateY(${(dx * 8).toFixed(2)}deg)`;
     };
     const onLeave = () => (card.style.transform = 'rotateX(0deg) rotateY(0deg)');
 
@@ -46,7 +46,7 @@ const ProtectionShowcase = () => {
 
   return (
     <section ref={rootRef} className="pshowcase-section">
-      {/* Animated background layers */}
+      {/* Background blobs & grain */}
       <div className="pshowcase-bg">
         <div className="pshowcase-blob blob-a" />
         <div className="pshowcase-blob blob-b" />
@@ -54,8 +54,21 @@ const ProtectionShowcase = () => {
       </div>
 
       <div className="pshowcase-container">
-        {/* LEFT: Image / Card */}
+        {/* LEFT SIDE */}
         <div className="pshowcase-left">
+
+          {/* Overlay text moved OUTSIDE card */}
+          <div className="pshowcase-text-top">
+            <p>
+              <strong>Get Protected Now With DefendMePro™.</strong><br />
+              It’s Not an Antivirus.<br />
+              Antivirus Can’t Stop Scammers.<br />
+              <strong>DefendMePro™ Protects You</strong> From Real Threats — Scams, Fraud, Identity Theft, Common Hacking Attempts, and Online Takeovers.<br />
+              With Real Human IT Support, Available 7 Days a Week.
+            </p>
+          </div>
+
+          {/* Image Card */}
           <div ref={imgCardRef} className="pshowcase-card">
             <div className="pshowcase-ring" />
             <img
@@ -70,17 +83,6 @@ const ProtectionShowcase = () => {
             <div className="pshowcase-badge badge-2">💬 Human Help 7 Days</div>
             <div className="pshowcase-badge badge-3">⚡ Instant Response</div>
 
-            {/* Overlay text (content unchanged) */}
-            <div className="pshowcase-overlay">
-              <p>
-                <strong>Get Protected Now With DefendMePro™.</strong><br />
-                It’s Not an Antivirus.<br />
-                Antivirus Can’t Stop Scammers.<br />
-                <strong>DefendMePro™ Protects You</strong> From Real Threats — Scams, Fraud, Identity Theft, Common Hacking Attempts, and Online Takeovers.<br />
-                With Real Human IT Support, Available 7 Days a Week.
-              </p>
-            </div>
-
             {/* Sparkles */}
             <span className="sparkle s1" />
             <span className="sparkle s2" />
@@ -88,7 +90,7 @@ const ProtectionShowcase = () => {
           </div>
         </div>
 
-        {/* RIGHT: Features */}
+        {/* RIGHT SIDE */}
         <div className="pshowcase-right">
           <h2 className="pshowcase-title">
             <img src="/Hero/shield.png" alt="Shield" className="pshowcase-inline-icon" />
@@ -96,66 +98,16 @@ const ProtectionShowcase = () => {
           </h2>
 
           <ul className="pshowcase-list">
-            <li>
-              <Link to="/DefendPro?item=identity-theft" className="pshowcase-link">
-                <span className="pshowcase-emoji">👤</span>
-                <span>Identity Theft Protection</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/DefendPro?item=fraud-detection" className="pshowcase-link">
-                <span className="pshowcase-emoji">⚠️</span>
-                <span>Fraud Detection</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/DefendPro?item=scam-protection" className="pshowcase-link">
-                <span className="pshowcase-emoji">🚫</span>
-                <span>Scam Protection</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/DefendPro?item=scam-alerts" className="pshowcase-link">
-                <span className="pshowcase-emoji">🔔</span>
-                <span>Scam Alerts Hub</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/DefendPro?item=financial-security" className="pshowcase-link">
-                <span className="pshowcase-emoji">💰</span>
-                <span>Financial Security</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/DefendPro?item=password-manager" className="pshowcase-link">
-                <span className="pshowcase-emoji">🔑</span>
-                <span>Password Manager</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/DefendPro?item=antivirus" className="pshowcase-link">
-                <span className="pshowcase-emoji">🖥️</span>
-                <span>Antivirus & Device Security</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/DefendPro?item=vpn" className="pshowcase-link">
-                <span className="pshowcase-emoji">🌐</span>
-                <span>VPN & Online Privacy</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/DefendPro?item=spam-call" className="pshowcase-link">
-                <span className="pshowcase-emoji">📞</span>
-                <span>Spam Call Protection</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/DefendPro?item=human-support" className="pshowcase-link">
-                <span className="pshowcase-emoji">👤</span>
-                <span>U.S.-Based Human Support</span>
-              </Link>
-            </li>
+            <li><Link to="/DefendPro?item=identity-theft" className="pshowcase-link"><span className="pshowcase-emoji">👤</span><span>Identity Theft Protection</span></Link></li>
+            <li><Link to="/DefendPro?item=fraud-detection" className="pshowcase-link"><span className="pshowcase-emoji">⚠️</span><span>Fraud Detection</span></Link></li>
+            <li><Link to="/DefendPro?item=scam-protection" className="pshowcase-link"><span className="pshowcase-emoji">🚫</span><span>Scam Protection</span></Link></li>
+            <li><Link to="/DefendPro?item=scam-alerts" className="pshowcase-link"><span className="pshowcase-emoji">🔔</span><span>Scam Alerts Hub</span></Link></li>
+            <li><Link to="/DefendPro?item=financial-security" className="pshowcase-link"><span className="pshowcase-emoji">💰</span><span>Financial Security</span></Link></li>
+            <li><Link to="/DefendPro?item=password-manager" className="pshowcase-link"><span className="pshowcase-emoji">🔑</span><span>Password Manager</span></Link></li>
+            <li><Link to="/DefendPro?item=antivirus" className="pshowcase-link"><span className="pshowcase-emoji">🖥️</span><span>Antivirus & Device Security</span></Link></li>
+            <li><Link to="/DefendPro?item=vpn" className="pshowcase-link"><span className="pshowcase-emoji">🌐</span><span>VPN & Online Privacy</span></Link></li>
+            <li><Link to="/DefendPro?item=spam-call" className="pshowcase-link"><span className="pshowcase-emoji">📞</span><span>Spam Call Protection</span></Link></li>
+            <li><Link to="/DefendPro?item=human-support" className="pshowcase-link"><span className="pshowcase-emoji">👤</span><span>U.S.-Based Human Support</span></Link></li>
           </ul>
 
           <div className="pshowcase-cta">

@@ -42,17 +42,29 @@ export default function ForYourBusiness() {
     <div ref={ref} className="bb-wrap">
       {/* Banner 1 */}
       <section className="bb-banner bb-1">
-        <div className="bb-bg" />
-        <div className="bb-content">
-          <h2 className="bb-head">
-            Tech Failures Drain Productivity, Profits, and Patience.
-          </h2>
-          <p className="bb-sub">
-            Frozen screens, endless error messages, failed connections — when technology breaks,
-            productivity crashes, customers wait, and your reputation takes the hit.
-          </p>
-        </div>
-      </section>
+  <div className="bb-bg" />
+  <div className="bb-content bb-grid">
+    <div className="bb-visual">
+      <div className="bb-image-card">
+        <img
+          src="/Hero/TechFailures.png" // ✅ तू अपनी image path डाल दे
+          alt="Tech Issues"
+          className="bb-img"
+          loading="lazy"
+        />
+      </div>
+    </div>
+    <div className="bb-text">
+      <h2 className="bb-head">
+        Tech Failures Drain Productivity, Profits, and Patience.
+      </h2>
+      <p className="bb-sub">
+        Frozen screens, endless error messages, failed connections — when technology breaks,
+        productivity crashes, customers wait, and your reputation takes the hit.
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* Banner 2 (with image) */}
       <section className="bb-banner bb-2">
@@ -83,26 +95,38 @@ export default function ForYourBusiness() {
 
       {/* Banner 3 */}
       <section className="bb-banner bb-3">
-        <div className="bb-bg" />
-        <div className="bb-content">
-          <h2 className="bb-head">
-            Safe Support Assist™ for Business — Your Own IT Department Without the Overhead
-          </h2>
-          <p className="bb-sub">
-            End-to-end IT: networks, shared printers, apps, cloud, security, backups, ongoing maintenance,
-            and troubleshooting from minor glitches to complex issues — all handled by live pros 7 days a week.
-          </p>
+  <div className="bb-bg" />
+  <div className="bb-content bb-grid">
+    <div className="bb-visual">
+      <div className="bb-image-card">
+        <img
+          src="/Hero/SafeSupport.png" // ✅ तू अपनी image path डाल दे
+          alt="Safe Support Assist"
+          className="bb-img"
+          loading="lazy"
+        />
+      </div>
+    </div>
+    <div className="bb-text">
+      <h2 className="bb-head">
+        Safe Support Assist™ for Business — Your Own IT Department Without the Overhead
+      </h2>
+      <p className="bb-sub">
+        End-to-end IT: networks, shared printers, apps, cloud, security, backups, ongoing maintenance,
+        and troubleshooting from minor glitches to complex issues — all handled by live pros 7 days a week.
+      </p>
 
-          <div className="bb-divider" aria-hidden />
+      <div className="bb-divider" aria-hidden />
 
-          <p className="bb-sub bb-strong">
-            What’s Included in Safe Support Assist™ for Business
-          </p>
-          <p className="bb-sub">
-            We handle every part of your company’s technology so your team can focus on what they do best.
-          </p>
-        </div>
-      </section>
+      <p className="bb-sub bb-strong">
+        What’s Included in Safe Support Assist™ for Business
+      </p>
+      <p className="bb-sub">
+        We handle every part of your company’s technology so your team can focus on what they do best.
+      </p>
+    </div>
+  </div>
+</section>
     </div>
     <WiFiNetwork/>
     <MultiplePrinter/>

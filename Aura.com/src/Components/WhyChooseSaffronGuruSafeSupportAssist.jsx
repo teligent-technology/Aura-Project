@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { FaBriefcase, FaClock, FaLayerGroup, FaHeadset, FaTools, FaUserCog, FaShieldAlt, FaHandshake } from 'react-icons/fa';
-import './WhyChooseSaffronGuruSafeSupportAssist.css'
-
+import './WhyChooseSaffronGuruSafeSupportAssist.css';
 
 const WhyChooseSaffronGuruSafeSupportAssist = () => {
   const ref = useRef(null);
@@ -32,10 +31,6 @@ const WhyChooseSaffronGuruSafeSupportAssist = () => {
     <section ref={ref} className="why-wrap">
       <div className="why-header">
         <h2>Why Choose <span className="highlight">Saffron Guru’s Safe Support Assist™</span> for Business</h2>
-        <p className="why-tagline">
-          When your technology works, your business thrives.<br />
-          <strong>Safe Support Assist™</strong> for Business keeps it that way — every day.
-        </p>
       </div>
 
       <div className="why-grid">
@@ -46,6 +41,14 @@ const WhyChooseSaffronGuruSafeSupportAssist = () => {
             <p>{p.desc}</p>
           </div>
         ))}
+      </div>
+
+      {/* ✅ Moved tagline to bottom */}
+      <div className="why-bottom-tagline">
+        <p>
+          When your technology works, your business thrives.<br />
+          <strong>Safe Support Assist™</strong> for Business keeps it that way — every day.
+        </p>
       </div>
     </section>
   );

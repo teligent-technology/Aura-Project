@@ -85,6 +85,20 @@
   min-width: 0;
 }
 
+/* New top text style */
+.pshowcase-text-top {
+  margin-bottom: 1rem;
+  padding: 1rem 1.25rem;
+  background: rgba(10,18,30,0.5);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  color: var(--ps-text);
+  font-size: clamp(.9rem, 1.05vw, 1rem);
+  line-height: 1.4;
+  backdrop-filter: none; /* Blur remove */
+}
+
+
 .pshowcase-card {
   position: relative;
   border-radius: 24px;
@@ -139,10 +153,16 @@
 /* Overlay text inside the card */
 .pshowcase-overlay {
   position: absolute;
-  left: clamp(1rem, 2vw, 1.25rem);
-  right: clamp(1rem, 2vw, 1.25rem);
-  bottom: clamp(1rem, 2vw, 1.25rem);
-  background: linear-gradient(180deg, rgba(10,18,30,0.5), rgba(10,18,30,0.25));
+  top: clamp(1rem, 2vw, 1.25rem);   /* TOP pe shift kiya */
+  left: clamp(1rem, 2vw, 1.25rem);  /* LEFT pe align */
+  right: clamp(1rem, 2vw, 1.25rem); /* RIGHT se same padding */
+
+  background: linear-gradient(
+    180deg,
+    rgba(10,18,30,0.6) 0%,   /* Upar se thoda dark */
+    rgba(10,18,30,0.3) 100%  /* Neeche soft fade */
+  );
+
   border: 1px solid rgba(255,255,255,0.08);
   backdrop-filter: blur(8px);
   padding: clamp(.9rem, 1.4vw, 1.1rem);
@@ -152,6 +172,7 @@
   font-size: clamp(.88rem, 1.1vw, 1rem);
   z-index: 3;
 }
+
 
 /* Floating badges */
 .pshowcase-badge {

@@ -1,120 +1,134 @@
+/* GlobalReach.css */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&display=swap');
 
 .global-reach-section {
   position: relative;
   isolation: isolate;
   padding: clamp(2.5rem, 4vw, 4rem) 1rem;
-  background: linear-gradient(180deg, #08101f, #0c1a33);
+  background: radial-gradient(circle at 20% 30%, #0a1528, #08101f 60%);
   overflow: hidden;
   color: #e9f6ff;
-  font-family: 'Outfit', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family: 'Outfit', system-ui, sans-serif;
 }
 
-/* subtle animated blobs behind the map */
+/* Background blobs */
 .global-bg-blobs::before,
 .global-bg-blobs::after {
   content: "";
   position: absolute;
-  inset: auto;
-  width: 46vmax; height: 46vmax;
-  filter: blur(50px);
+  width: 46vmax;
+  height: 46vmax;
+  filter: blur(60px);
   border-radius: 50%;
-  opacity: .28; mix-blend-mode: screen;
-  animation: blobFloat 18s ease-in-out infinite alternate;
+  opacity: .25;
+  mix-blend-mode: screen;
+  animation: blobFloat 20s ease-in-out infinite alternate;
   pointer-events: none;
 }
 .global-bg-blobs::before {
-  left: -10vmax; top: -12vmax;
-  background: radial-gradient(closest-side, rgba(81,225,255,.6), transparent 70%);
+  left: -12vmax;
+  top: -14vmax;
+  background: radial-gradient(closest-side, rgba(81,225,255,0.7), transparent 70%);
 }
 .global-bg-blobs::after {
-  right: -12vmax; bottom: -14vmax;
-  background: radial-gradient(closest-side, rgba(124,255,196,.5), transparent 70%);
-  animation-delay: 3s;
+  right: -14vmax;
+  bottom: -16vmax;
+  background: radial-gradient(closest-side, rgba(124,255,196,0.65), transparent 70%);
+  animation-delay: 4s;
 }
 @keyframes blobFloat {
   0% { transform: translate(0,0) scale(1); }
-  100% { transform: translate(2%, -2%) scale(1.05); }
+  100% { transform: translate(4%, -3%) scale(1.08); }
 }
 
 .global-heading {
   font-weight: 800;
-  letter-spacing: .3px;
-  text-shadow: 0 4px 30px rgba(81,225,255,.2);
+  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+  letter-spacing: .4px;
+  text-shadow: 0 4px 30px rgba(81,225,255,.35);
 }
 
 .global-subtext {
   color: #a7bed9;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 .highlight { color: #7cffc4; }
 
+/* Map container */
 .map-wrapper {
   position: relative;
   margin: 0 auto;
-  max-width: 1100px;
-  border-radius: 18px;
+  max-width: 1000px;
+  border-radius: 22px;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-  border: 1px solid rgba(255,255,255,.08);
-  box-shadow: 0 30px 80px rgba(18, 130, 200, .18);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 0 40px rgba(81,225,255,0.15), 0 0 80px rgba(81,225,255,0.1);
   padding: clamp(.25rem, .9vw, .75rem);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.map-wrapper:hover {
+  transform: scale(1.015);
+  box-shadow: 0 0 50px rgba(81,225,255,0.25), 0 0 100px rgba(81,225,255,0.2);
 }
 
-/* react-simple-maps svg */
-.world-map {
-  width: 100%;
-  height: auto;
+/* Geography shapes */
+.rsm-geography {
+  transition: all 0.3s ease;
+}
+.rsm-geography:hover {
+  filter: drop-shadow(0 0 10px rgba(124,255,196,0.6));
 }
 
-/* region styling */
-.geo-shape {
-  fill: #0e2947;
-  stroke: rgba(255,255,255,.08);
-  stroke-width: .6;
-  transition: fill .25s ease, filter .25s ease, stroke .25s ease;
-}
-.ca-shape {
-  fill: #0e2d3f;
-}
-.geo-shape:hover {
-  fill: #173a63;
-  stroke: rgba(124,255,196,.6);
-  filter: drop-shadow(0 6px 22px rgba(81,225,255,.25));
-}
-
-/* glowing dots at centroids */
+/* Marker dots */
 .dot {
   fill: #8af5ff;
-  opacity: .9;
-  filter: drop-shadow(0 0 12px rgba(81,225,255,.8));
+  opacity: .95;
+  filter: drop-shadow(0 0 12px rgba(81,225,255,.9));
 }
 .dot-pulse {
-  animation: pulse 2s ease-in-out infinite;
+  animation: pulse 2.2s ease-in-out infinite;
 }
 @keyframes pulse {
-  0%   { r: 2.2; opacity: .85; }
-  50%  { r: 4.2; opacity: 1; }
-  100% { r: 2.2; opacity: .85; }
+  0%   { r: 2.3; opacity: .85; }
+  50%  { r: 4.3; opacity: 1; }
+  100% { r: 2.3; opacity: .85; }
 }
 
-/* tooltip */
+/* Marker labels */
+.label-marker { pointer-events: none; }
+.geo-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  fill: #eaf6ff;
+  letter-spacing: .2px;
+  paint-order: stroke fill;
+  stroke: rgba(11,18,34,.8);
+  stroke-width: 3px;
+  user-select: none;
+}
+@media (max-width: 520px){
+  .geo-label{ display:none; }
+}
+
+/* Tooltip */
 .map-tooltip {
   position: absolute;
   transform: translate(-50%, -100%);
-  padding: .4rem .6rem;
-  background: rgba(9, 20, 38, .8);
+  padding: .45rem .7rem;
+  background: rgba(15, 25, 45, 0.7);
   color: #e9f6ff;
-  border: 1px solid rgba(124,255,196,.35);
+  border: 1px solid rgba(124,255,196,.4);
   border-radius: 10px;
   font-size: .85rem;
   pointer-events: none;
   white-space: nowrap;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  backdrop-filter: blur(8px) saturate(1.4);
+  box-shadow: 0 0 15px rgba(81,225,255,0.35);
+  animation: tooltipFade 0.25s ease forwards;
 }
-
-/* responsive */
-@media (max-width: 768px) {
-  .map-wrapper { max-width: 100%; }
+@keyframes tooltipFade {
+  from { opacity: 0; transform: translate(-50%, -90%); }
+  to { opacity: 1; transform: translate(-50%, -100%); }
 }
