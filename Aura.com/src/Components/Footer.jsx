@@ -13,6 +13,7 @@ import Videos from './Videos';
 import SocialMedia from './SocialMedia';
 import './Footer.css'
 import ItSupport from './ItSupport';
+import ProtectionShowcase from './ProtectionShowcase';
 
 const Footer = () => {
 
@@ -112,56 +113,9 @@ const Footer = () => {
 
 {/* <div className="full-width-wrapper"> */}
   {/* <div className="content-center"> */}
-<section className="protection-showcase-section">
+<ProtectionShowcase/>
 
-    <div className="protection-inner">
-
-  <div className="image-overlay-wrapper">
-  <img src="/Hero/Digital.png" alt="Protection Illustration" className="overlay-image" />
-  <div className="overlay-text">
-    <p>
-      <strong>Get Protected Now With DefendMePro™.</strong><br />
-      It’s Not an Antivirus.<br />
-      Antivirus Can’t Stop Scammers.<br />
-      <strong>DefendMePro™ Protects You</strong> From Real Threats — Scams, Fraud, Identity Theft, Common Hacking Attempts, and Online Takeovers.<br />
-      With Real Human IT Support, Available 7 Days a Week.
-    </p>
-  </div>
-</div>
-
-
-  <div className="features-list">
-
-    <h2 className="features-title">
-     <img src="/Hero/shield.png" alt="Shield" className="inline-icon" /><span>DefendMePro™ Includes Everything for Your Digital Protection — and Support for Tech Hurdles, Too. ✅</span>
-</h2>
-
-<ul className="defend-feature-list">
-  <li><Link to="/DefendPro?item=identity-theft"><span>👤</span> Identity Theft Protection</Link></li>
-  <li><Link to="/DefendPro?item=fraud-detection"><span>⚠️</span> Fraud Detection</Link></li>
-  <li><Link to="/DefendPro?item=scam-protection"><span>🚫</span> Scam Protection</Link></li> 
-  <li><Link to="/DefendPro?item=scam-alerts"><span>🔔</span> Scam Alerts Hub</Link></li>
-  <li><Link to="/DefendPro?item=financial-security"><span>💰</span> Financial Security</Link></li>
-  <li><Link to="/DefendPro?item=password-manager"><span>🔑</span> Password Manager</Link></li>
-  <li><Link to="/DefendPro?item=antivirus"><span>🖥️</span> Antivirus & Device Security</Link></li>
-  <li><Link to="/DefendPro?item=vpn"><span>🌐</span> VPN & Online Privacy</Link></li>
-  <li><Link to="/DefendPro?item=spam-call"><span>📞</span> Spam Call Protection</Link></li> 
-  <li><Link to="/DefendPro?item=human-support"><span>👤</span> U.S.-Based Human Support</Link></li>
-</ul>
-
-
-
-
-
-        </div>
-
-  </div>
-
-<div className="learn-btn-wrapper">
-  <Link className="learn-more-link" to="/LearnMore">📘 Learn More</Link>
-</div>
-</section>
-
+    <ItSupport/>
 
 
 
@@ -193,7 +147,6 @@ const Footer = () => {
 
 
     <GlobalReach/>
-    <ItSupport/>
 
     <AllSection/>
     {/* <Disclaimer/> */}
