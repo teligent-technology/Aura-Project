@@ -19,9 +19,33 @@
   background: rgba(0,0,0,0.55);
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
-  z-index: 5;
-  animation: fadeSlideIn 0.8s ease forwards;
+  z-index: 10;
+  white-space: nowrap;
 }
+
+/* Tablet */
+@media (max-width: 992px) {
+  .pshowcase-top-left {
+    font-size: 1.3rem;
+    padding: 0.35rem 0.7rem;
+    top: 0.8rem;
+  }
+}
+
+/* Mobile - move inside flow to avoid overlap */
+@media (max-width: 640px) {
+  .pshowcase-top-left {
+    position: static;  /* ❗ No absolute position on mobile */
+    display: inline-block;
+    margin-bottom: 1rem;
+    left: auto;
+    top: auto;
+    white-space: normal;
+    font-size: 1.1rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
 
 @keyframes fadeSlideIn {
   from { opacity: 0; transform: translateY(-10px); }
