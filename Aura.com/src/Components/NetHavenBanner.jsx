@@ -19,7 +19,7 @@ const NetHavenBanner = () => {
         {/* Center Text */}
         <div className="nh-text">
           <h1 className="nh-title">
-            3. NetHaven™ — AI-Powered Parental Control Solution
+            NetHaven™ — AI-Powered Parental Control Solution
           </h1>
           <p className="nh-subtitle">
             Guide your children toward a safer, healthier digital life with our AI-powered parental control solution — 

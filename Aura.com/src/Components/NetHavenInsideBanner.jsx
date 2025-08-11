@@ -22,7 +22,7 @@ const NetHavenInsideBanner = () => {
 
         {/* Right: Content (text unchanged) */}
         <article className="inside-content">
-          <h2 className="inside-eyebrow">5. What’s Inside NetHaven™</h2>
+          <h2 className="inside-eyebrow">What’s Inside NetHaven™</h2>
 
           <h3 className="inside-sub">
             Your Complete AI-Powered Parental Control Solution — Protecting Up to 5 Devices in Your Household

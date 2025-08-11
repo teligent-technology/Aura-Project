@@ -115,17 +115,7 @@ const Footer = () => {
   {/* <div className="content-center"> */}
 <ProtectionShowcase/>
 
-    <ItSupport/>
-
-
-
-
-
-        </Row>
-
-      </Container>
-
-      <div className="protection-shared-cta">
+     <div className="protection-shared-cta">
     <div className="cta-line">
       <img src="/Hero/discount.png" alt="offer" className="cta-icon" />
       <span>
@@ -138,6 +128,18 @@ const Footer = () => {
 {/* <button className="cta-btn" onClick={() => document.getElementById('learn-more')?.scrollIntoView({ behavior: 'smooth' })}>📘 Learn More</button> */}
     </div>
   </div>
+
+    <ItSupport/>
+
+
+
+
+
+        </Row>
+
+      </Container>
+
+ 
     </section>
     <SocialMedia/>
 

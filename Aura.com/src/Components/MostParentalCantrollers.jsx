@@ -19,7 +19,7 @@ const MostParentalCantrollers = () => {
         {/* Right Content */}
         <div className="nethaven-content">
           <h2 className="nethaven-heading">
-            <span className="highlight">4.</span> Most Parental Controls Can Be Outsmarted.
+            Most Parental Controls Can Be Outsmarted.
             <br /> <span className="highlight-accent">NetHaven™ Can’t.</span>
           </h2>
           <p className="nethaven-text">

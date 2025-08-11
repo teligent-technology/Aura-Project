@@ -8,6 +8,27 @@
   --ps-text:#eaf6ff; --ps-muted:#9bb0c8;
 }
 
+.pshowcase-top-left {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Outfit', sans-serif;
+  color: #fff;
+  background: rgba(0,0,0,0.55);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  z-index: 5;
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
 /* ============= SECTION ============= */
 /* Cinematic gradient + conic sweep + subtle scanlines + edge glow */
 .pshowcase-section{

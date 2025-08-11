@@ -70,14 +70,17 @@ const ProtectionShowcase = () => {
         <div className="pshowcase-grain" />
       </div>
 
+      {/* 🔹 Top-left outside container */}
+      <div className="pshowcase-top-left">
+        Get Protected Now With DefendMePro™
+      </div>
+
       <div className="pshowcase-container">
         {/* LEFT SIDE */}
         <div className="pshowcase-left">
-
-          {/* Overlay text moved OUTSIDE card */}
+          {/* Paragraph stays inside container */}
           <div className="pshowcase-text-top">
             <p>
-              <strong>Get Protected Now With DefendMePro™.</strong><br />
               It’s Not an Antivirus.<br />
               Antivirus Can’t Stop Scammers.<br />
               <strong>DefendMePro™ Protects You</strong> From Real Threats — Scams, Fraud, Identity Theft, Common Hacking Attempts, and Online Takeovers.<br />
@@ -85,7 +88,6 @@ const ProtectionShowcase = () => {
             </p>
           </div>
 
-          {/* Image Card */}
           <div ref={imgCardRef} className="pshowcase-card">
             <div className="pshowcase-ring" />
             <img

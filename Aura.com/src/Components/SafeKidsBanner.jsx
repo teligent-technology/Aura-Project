@@ -11,7 +11,17 @@ const SafeKidsBanner = () => {
 
       {/* Inner Content */}
       <div className="safe-inner">
-        {/* Left Text */}
+        {/* Left Visual */}
+        <div className="safe-image">
+          <div className="image-light"></div>
+          <img
+            src="/Hero/SafeKidsBanner.png"
+            alt="Safe Digital World"
+            loading="lazy"
+          />
+        </div>
+
+        {/* Right Text */}
         <div className="safe-text">
           <h1 className="safe-title">
             Imagine a Safer, Healthier Digital World for Your Kids
@@ -21,16 +31,6 @@ const SafeKidsBanner = () => {
             toxic strangers, and endless scrolling. Where you feel confident knowing
             they’re protected, even when you’re not in the room.
           </p>
-        </div>
-
-        {/* Right Visual */}
-        <div className="safe-image">
-          <div className="image-light"></div>
-          <img
-            src="/Hero/SafeKidsBanner.png"
-            alt="Safe Digital World"
-            loading="lazy"
-          />
         </div>
       </div>
     </section>
