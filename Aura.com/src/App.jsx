@@ -32,6 +32,7 @@ import InternetSecurity from './Pages/InternetSecurity';
 import LearnMore from './Pages/LearnMore';
 import ForYourBusiness from './Pages/ForYourBusiness';
 import ForYourHome from './Pages/ForYourHome';
+import ParentSolution from './Pages/ParentSolution';
 const App = () => {
   useEffect(() => {
     keepAlive(); // 👈 Prevent Render from sleeping
@@ -72,6 +73,8 @@ const App = () => {
           <Route path="/internet-security" element={<InternetSecurity />} />
           <Route path="/ForYourBusiness" element={<ForYourBusiness />} />
           <Route path="/ForYourHome" element={<ForYourHome />} />
+                    <Route path="/ParentSolution" element={<ParentSolution />} />
+
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
