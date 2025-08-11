@@ -44,6 +44,23 @@ const ProtectionShowcase = () => {
     };
   }, []);
 
+  // Cursor-reactive glow effect for .pshowcase-link
+  useEffect(() => {
+    const links = document.querySelectorAll('.pshowcase-link');
+    const handleMove = (e) => {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      e.currentTarget.style.setProperty('--x', `${x}%`);
+      e.currentTarget.style.setProperty('--y', `${y}%`);
+    };
+    links.forEach((el) => el.addEventListener('pointermove', handleMove));
+
+    return () => {
+      links.forEach((el) => el.removeEventListener('pointermove', handleMove));
+    };
+  }, []);
+
   return (
     <section ref={rootRef} className="pshowcase-section">
       {/* Background blobs & grain */}

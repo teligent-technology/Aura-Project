@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { SiTrustpilot } from 'react-icons/si';
 import { GiConfirmed, GiReceiveMoney, GiLockedChest } from 'react-icons/gi';
 import { MdSupportAgent } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 import {
   Clock,
   ShieldOff,
@@ -165,7 +166,9 @@ const Hero = () => {
     <li><Timer className="icon" /> Screen Time Limits</li>
     <li><BrainCircuit className="icon" /> AI Powered</li>
   </ul>
-  <button className="aura-btn">Learn More</button>
+<Link to="/ParentSolution" className="aura-btn">
+  Learn More
+</Link>
   {/* <img src="" alt="" /> */}
 </div>
   </div>
