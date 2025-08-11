@@ -1669,8 +1669,8 @@ footer, .footer, .aura-footer {
 }
 
 .cta-icon {
-  width: 100px;
-  height: 100px;
+  width: 275px;
+  height: 275px;
   object-fit: contain;
   filter: drop-shadow(0 0 6px #00f7ff77);
 }
