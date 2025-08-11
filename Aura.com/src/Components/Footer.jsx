@@ -118,7 +118,7 @@ const Footer = () => {
      <div className="protection-shared-cta">
     <div className="cta-line">
       <img src="/Hero/discount.png" alt="offer" className="cta-icon" />
-      <span>
+      <span className='VeterenText'>
         We offer <strong>special pricing for seniors and veterans</strong>. Please speak to our expert to learn more.
       </span>
     </div>
