@@ -2,6 +2,7 @@ import React from "react";
 import AppNavbar from "../Components/AppNavbar";
 import AllSection from "../Components/AllSection";
 import { Container, Row, Col, Card, Button, Badge } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Pricing.css";
 
 const Pricing = () => {
@@ -77,13 +78,12 @@ const Pricing = () => {
                         <li key={i}>{f}</li>
                       ))}
                     </ul>
-                    <Button
-                      variant={plan.color}
-                      size="lg"
-                      className="mt-auto shadow-sm subscribe-btn"
-                    >
-                      Subscribe Now
-                    </Button>
+                    <Link
+  to="/contact" // ✅ Replace with your desired route
+  className="mt-auto shadow-sm subscribe-btn btn btn-lg btn-primary"
+>
+  Subscribe Now
+</Link>
                   </Card.Body>
                 </Card>
               </Col>
