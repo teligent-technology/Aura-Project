@@ -28,7 +28,7 @@ const InternetSecurity = () => {
               <h2 className="section-heading">🚨 Top Internet Threats in 2025</h2>
               <ul className="security-list">
                 <li><strong>Phishing Emails:</strong> Fake emails pretending to be from banks or services.</li>
-                <li><strong>Tech Support Scams:</strong> Scammers pretending to be from Microsoft, Apple, or “Aura” support.</li>
+                <li><strong>Tech Support Scams:</strong> Scammers pretending to be from Microsoft, Apple, or "Saffron Guru" support.</li>
                 <li><strong>Remote Access Fraud:</strong> Fraudsters asking to install apps like AnyDesk or TeamViewer.</li>
                 <li><strong>Fake Shopping Sites:</strong> Attractive deals that steal your credit card info.</li>
                 <li><strong>Romance Scams:</strong> Emotional manipulation to extract money from lonely users.</li>

@@ -69,7 +69,7 @@ const Solution = () => {
                 they meet online. These scammers exploit loneliness and empathy to extract money.
               </p>
               <p>
-                Aura's fraud detection flags unusual activity, protects bank transactions, and provides expert
+                Saffron Guru fraud detection flags unusual activity, protects bank transactions, and provides expert
                 counselors to intervene if needed.
               </p>
             </Col>
