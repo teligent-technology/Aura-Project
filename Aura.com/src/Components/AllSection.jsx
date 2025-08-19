@@ -9,7 +9,7 @@ const footerLinks = [
   { label: "About Us", path: "/about" },
   { label: "Privacy Policy", path: "/privacy-policy" },
   { label: "Terms & Conditions", path: "/terms" },
-  { label: "Return Policy", path: "/return-policy" },
+  { label: "Return & Refund Policy", path: "/return-policy" },
   { label: "Why Choose Us?", path: "/why-us" },
   { label: "Contact Us", path: "/contact" },
 ];

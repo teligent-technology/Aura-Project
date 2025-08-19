@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import keepAlive from './utils/keepalive';
-
+import ScrollToTop from './Components/ScrollToTop';
 import Layout from './Layout';
 import Home from './Pages/Home';
 import Feature from './Pages/Feature';
@@ -42,7 +42,9 @@ const App = () => {
   return (
     <div style={{ margin: 0, padding: 0, overflowX: 'hidden' }}>
       <Router>
+                  <ScrollToTop/>
         <Routes>
+
           {/* Public Routes */}
           <Route path="/" element={<Layout><Home /></Layout>} />
           <Route path="/login" element={<Login />} />
