@@ -20,7 +20,7 @@ const ReturnPolicy = () => {
 
                 <p className="return-text">
                   If for any reason you’re not satisfied with your Digital Security Package (<strong>DefendMePro™</strong>), our Parental Control Tool (<strong>NetHaven™</strong>), our Remote IT Support (<strong>SafeSupport Assist™</strong>), or any standalone third-party software (such as Microsoft, Adobe, Norton, and others) within the first 30 days, just call us toll-free at  
-                  <span className="phone"> 📞 844-313-4987</span>. We’ll refund you — quickly and fairly.
+                  <span className="phone"> 📞+1 844-313-4987</span>. We’ll refund you — quickly and fairly.
                 </p>
 
                 <h2 className="return-subheading">✅ Covered by Our 30-Day Guarantee</h2>
