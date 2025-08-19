@@ -55,7 +55,7 @@ const Hero = () => {
   <Container className="trust-narrow-container">
     <Row className="text-center justify-content-center gx-3 gy-4">
       {/* 1 */}
-      <Col xs={12} sm={6} md={4} className="trust-item">
+     <Col xs={12} sm={6} md={4} className="trust-item">
   <a
     href="https://www.bbb.org/us/tx/irving/profile/computer-software/saffron-guru-0875-91317606/#sealclick"
     target="_blank"
@@ -71,6 +71,7 @@ const Hero = () => {
     </div>
   </a>
 </Col>
+
 
 
 
