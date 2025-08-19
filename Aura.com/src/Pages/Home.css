@@ -321,6 +321,8 @@
 /* Text */
 .trust-text {
   white-space: nowrap;
+  color: black;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 

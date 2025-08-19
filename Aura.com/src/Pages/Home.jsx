@@ -105,7 +105,10 @@ const Hero = () => {
           <div className="trust-icon-wrapper handshake-icon">
             <GiReceiveMoney className="trust-icon" />
           </div>
-          <span className="trust-text">30-Day Money-Back Guarantee</span>
+<Link to="/DaysMoneyBack" className="trust-text">
+  30-Day Money-Back Guarantee
+</Link>
+
         </div>
       </Col>
 

@@ -34,6 +34,7 @@ import ForYourBusiness from './Pages/ForYourBusiness';
 import ForYourHome from './Pages/ForYourHome';
 import ParentSolution from './Pages/ParentSolution';
 import Pricing from './Pages/Pricing';
+import DaysMoneyBack from './Pages/DaysMoneyBack';
 const App = () => {
   useEffect(() => {
     keepAlive(); // 👈 Prevent Render from sleeping
@@ -78,6 +79,7 @@ const App = () => {
           <Route path="/ForYourHome" element={<ForYourHome />} />
                     <Route path="/ParentSolution" element={<ParentSolution />} />
                     <Route path="/Pricing" element={<Pricing />} />
+                                        <Route path="/DaysMoneyBack" element={<DaysMoneyBack />} />
 
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" />} />

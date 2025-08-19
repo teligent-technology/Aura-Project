@@ -12,84 +12,156 @@ const Terms = () => {
           <Row>
             <Col md={12}>
               <h1 className="terms-heading">Terms & Conditions</h1>
+
               <p className="terms-intro">
-                Welcome to Secure Saffron Guru. By using our services, you agree to the following terms and conditions. 
-                These terms are written in clear, simple language so that all of our customers — especially seniors — 
-                can understand their rights and responsibilities. Please take a few moments to review them carefully.
+                Welcome to <strong>Saffron Guru</strong>. By using our services, you agree to the terms below.
+                We’ve written everything in clear, simple language—especially for seniors and families—so your
+                rights and responsibilities are easy to understand.
               </p>
 
-              <h2 className="terms-subheading">Acceptance of Terms</h2>
+              {/* 1) Eligibility & Authorization */}
+              <h2 className="terms-subheading">Eligibility &amp; Authorization</h2>
               <p className="terms-text">
-                By using Secure Saffron Guru, you confirm that you are at least 18 years old (or have a trusted caregiver managing your account) 
-                and agree to be legally bound by this agreement. If you do not accept these terms, please do not use our services.
+                By using our services, you confirm that you are at least 18 years old and legally authorized to act
+                on behalf of yourself, your household, or your business. You agree to provide accurate information
+                when creating accounts, purchasing services, or communicating with us.
               </p>
 
-              <h2 className="terms-subheading">Services Overview</h2>
+              {/* 2) Scope of Services */}
+              <h2 className="terms-subheading">Scope of Services</h2>
               <p className="terms-text">
-                Secure Saffron Guru provides digital safety tools such as scam alerts, identity theft protection, VPN access, antivirus, 
-                device tune-ups, and real-time U.S.-based support. These services are designed with seniors in mind — clear, simple, and caring.
+                Saffron Guru provides a wide range of digital protection and IT support solutions for families and
+                businesses. Our offerings include but are not limited to:
               </p>
-
-              <h2 className="terms-subheading">User Responsibilities</h2>
               <ul className="terms-list">
-                <li>✅ Keep your account details accurate</li>
-                <li>✅ Use services only for lawful, personal use</li>
-                <li>✅ Protect your login details (you may also assign a caregiver)</li>
+                <li>AI-Based Parental Control for safer browsing and monitoring.</li>
+                <li>Scam Protection, Identity Theft Monitoring, and Fraud Detection.</li>
+                <li>Zero-Day Malware Protection to guard against new and emerging threats.</li>
+                <li>VPN Access &amp; Online Privacy Protection.</li>
+                <li>Internet Security &amp; Antivirus Solutions.</li>
+                <li>End-to-End Protection Packages tailored for businesses.</li>
+                <li>Remote and On-Site IT Support for both home and business needs.</li>
+                <li>
+                  Third-Party Software Sales &amp; Support, including Microsoft Office, Microsoft Servers, Norton,
+                  Adobe, McAfee, and others.
+                </li>
               </ul>
 
-              <h2 className="terms-subheading">Subscription & Billing</h2>
+              {/* 3) Software & Licensing */}
+              <h2 className="terms-subheading">Software &amp; Licensing</h2>
               <p className="terms-text">
-                Services are billed monthly or annually depending on your plan. 
-                We will always notify you before renewal, and you may cancel at any time. 
-                Billing is transparent, with no hidden charges.
+                Certain services rely on third-party software. All software is licensed, not sold. Your use of such
+                software is subject to the license terms provided by the original manufacturer (e.g., Microsoft,
+                Norton, McAfee, Adobe). Unauthorized distribution or misuse is strictly prohibited.
               </p>
 
-              <h2 className="terms-subheading">Cancellations & Refunds</h2>
+              {/* 4) Payments & Billing */}
+              <h2 className="terms-subheading">Payments &amp; Billing</h2>
               <p className="terms-text">
-                You may cancel at any time through your account dashboard or by calling our support team. 
-                Refunds are provided in accordance with our refund policy. We make the process simple and stress-free.
+                All payments must be made using valid payment methods accepted by Saffron Guru. Prices and fees are
+                displayed at the time of purchase. In case of chargebacks or unpaid invoices, we reserve the right to
+                suspend or terminate services, and in certain cases, to uninstall or disable licensed software.
               </p>
 
-              <h2 className="terms-subheading">Limitations of Liability</h2>
+              {/* 5) Refunds & Money-Back Guarantee */}
+              <h2 className="terms-subheading">Refunds &amp; Money-Back Guarantee</h2>
               <p className="terms-text">
-                While Secure Saffron Guru works hard to protect you, we cannot guarantee complete safety against every possible scam or fraud. 
-                We are not responsible for damages caused by misuse, third-party actions, or interruptions beyond our control.
+                We proudly offer a <strong>30-day money-back guarantee</strong>. If you are not satisfied with our
+                services, parental control, IT support, or any third-party standalone software purchased through us
+                (such as Microsoft Office, Norton, or McAfee), you may request a full refund within 30 days of
+                purchase. Refunds may be subject to verification of service usage and uninstall requirements.
               </p>
 
-              <h2 className="terms-subheading">Termination</h2>
+              {/* 6) Data Security & Privacy */}
+              <h2 className="terms-subheading">Data Security &amp; Privacy</h2>
               <p className="terms-text">
-                We reserve the right to suspend or terminate access if a user violates these terms or engages in harmful activities. 
-                We will always attempt to notify you before such action whenever possible.
+                We take your privacy seriously. Personal information is collected, stored, and used only for service
+                delivery, account management, and customer support. We do not sell your information to third parties.
+                For more details, please review our Privacy Policy.
               </p>
 
-              <h2 className="terms-subheading">Intellectual Property</h2>
+              {/* 7) Acceptable Use */}
+              <h2 className="terms-subheading">Acceptable Use</h2>
+              <p className="terms-text">You agree not to use our services for unlawful purposes, including but not limited to:</p>
+              <ul className="terms-list">
+                <li>Attempting to gain unauthorized access to systems.</li>
+                <li>Distributing malware, spam, or fraudulent content.</li>
+                <li>Misusing licensed software.</li>
+              </ul>
               <p className="terms-text">
-                All text, images, software, and design on Secure Saffron Guru are protected by copyright. 
-                You may not copy or redistribute our content without written permission.
+                Violation of these terms may result in immediate suspension or termination of services.
               </p>
 
-              <h2 className="terms-subheading">Accessibility</h2>
+              {/* 8) Limitation of Liability */}
+              <h2 className="terms-subheading">Limitation of Liability</h2>
               <p className="terms-text">
-                We are committed to making our services accessible for seniors and individuals with disabilities. 
-                If you have trouble reading or navigating, contact us and we will provide assistance.
+                While we strive to deliver reliable services, Saffron Guru is not liable for indirect, incidental, or
+                consequential damages, including data loss, business interruption, or financial losses, arising from
+                the use of our services. Our liability is limited to the fees paid for the specific service in question.
               </p>
 
+              {/* 9) Service Modifications */}
+              <h2 className="terms-subheading">Service Modifications</h2>
+              <p className="terms-text">
+                We may update, improve, or discontinue services at any time. Terms &amp; Conditions may also be
+                updated to reflect new services or legal requirements. Continued use of our services after updates
+                constitutes acceptance of the revised terms.
+              </p>
+
+              {/* 10) Governing Law */}
               <h2 className="terms-subheading">Governing Law</h2>
               <p className="terms-text">
-                These terms are governed by the laws of the United States. Any disputes will be handled in your local jurisdiction whenever possible.
+                These Terms &amp; Conditions are governed by and construed under the laws of the United States. Any
+                disputes shall be resolved in the appropriate courts within the <strong>State of Delaware, USA</strong>.
               </p>
 
-              <h2 className="terms-subheading">Changes to Terms</h2>
-              <p className="terms-text">
-                From time to time, we may update these terms. We will notify you by email or phone call (for senior users who request it) if there are important changes.
-              </p>
-
+              {/* Contact */}
               <h2 className="terms-subheading">Contact Us</h2>
               <p className="terms-text">
-                Questions or concerns? Our support team is here for you.  
-                Email: <strong>CustomerSupport@SaffronGuru.com</strong>  
-                Phone: <strong>+1 844-313-4987</strong> (Available daily, senior-friendly hours)
+                If you have any questions about these Terms and Conditions, or if you need support regarding our
+                services, you may contact us at:
+                <br />
+                <br />
+                <strong>Saffron Guru LLC – Corporate Office</strong>
+                <br />
+                6565 N. MacArthur Blvd, Suite 225
+                <br />
+                Irving, TX 75039
+                <br />
+                United States
+                <br />
+                <br />
+                <strong>📞 Toll-Free:</strong>{' '}
+                <a href="tel:+18443134987">844-313-4987</a>
+                <br />
+                <strong>📧 Email:</strong>{' '}
+                <a href="mailto:info@saffronguru.com">info@saffronguru.com</a>
               </p>
+
+              {/* ✅ Google Map Embed */}
+              <div className="map-card">
+                <iframe
+                  title="Saffron Guru Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.206299122606!2d-96.95777408481087!3d32.897495680940814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c2e1b4b4b3a1b%3A0x3a0ad0f71b3a2d5e!2s6565%20N%20MacArthur%20Blvd%20%23225%2C%20Irving%2C%20TX%2075039%2C%20USA!5e0!3m2!1sen!2sin!4v1702210000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="280"
+                  style={{ border: 0, borderRadius: "12px" }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+
+                <p className="map-note">
+                  📍{" "}
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=6565+N+MacArthur+Blvd+Suite+225+Irving+TX+75039"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Get Directions on Google Maps
+                  </a>
+                </p>
+              </div>
             </Col>
           </Row>
         </Container>
